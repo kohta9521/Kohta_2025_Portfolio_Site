@@ -5,7 +5,6 @@ import Link from "next/link";
 
 // icon
 
-
 // scss
 import styles from "./styles/ListBoxItem.module.scss";
 
