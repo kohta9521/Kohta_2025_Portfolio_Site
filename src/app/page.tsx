@@ -1,95 +1,41 @@
-import Image from "next/image";
-import styles from "./styles/page.module.scss";
+import React from "react";
+
+// scss
+import styles from "../styles/page.module.scss";
+
+// data
+import { aboutSubItems } from "@/data/subItems";
+
+// components
+import Header from "@/components/organism/Header";
+import ListItem from "@/components/molecules/ListItem";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+      <Header id="home">
+        <ListItem
+          id="about"
+          mainLink="/about"
+          mainTitle="About"
+          subItems={aboutSubItems}
         />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </Header>
+      <h1>hello world</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestias
+        aspernatur vitae, distinctio officia in. Repellendus totam ab
+        repudiandae cumque mollitia quam dolore voluptates reprehenderit nisi
+        maiores, voluptatibus illo quos fugit magnam consequuntur alias eos
+        minus exercitationem sequi? Cum cupiditate aliquid et amet iusto illum
+        suscipit voluptatem commodi alias modi enim quis officiis facilis sed
+        rerum expedita officia, temporibus cumque? Magni iure placeat tenetur
+        voluptatibus facere dolore necessitatibus nam distinctio sint voluptatum
+        dolores repellendus porro veritatis repudiandae molestiae, iste
+        voluptate modi numquam a. Voluptatibus impedit possimus quaerat, saepe
+        deleniti quo earum nam! Eum veritatis quam dolor nemo libero assumenda
+        cum!
+      </p>
     </div>
   );
 }

@@ -40,3 +40,27 @@ export const Default: LogoStory = {
     size: "medium",
   },
 };
+
+export const Small: LogoStory = {
+  args: {
+    id: "logo",
+    link: "/",
+    size: "small",
+  },
+};
+
+export const Medium: LogoStory = {
+  args: {
+    id: "logo",
+    link: "/",
+    size: "medium",
+  },
+};
+
+export const Large: LogoStory = {
+  args: {
+    id: "logo",
+    link: "/",
+    size: "large",
+  },
+};
