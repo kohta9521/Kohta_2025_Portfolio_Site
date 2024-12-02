@@ -5,6 +5,7 @@ import styles from "./styles/Header.module.scss";
 
 // icon
 import { FaPhone } from "react-icons/fa";
+import { GrDocumentPdf } from "react-icons/gr";
 
 // components
 import Logo from "../atoms/Logo";
@@ -23,6 +24,14 @@ const Header = ({ id, children }: HeaderProps) => {
         <Logo id="logo" link="/" size="medium" />
         <div className={styles.listBox}>{children}</div>
         <div className={styles.rightBox}>
+          <ListBoxItem
+            id="resume"
+            link="/resume"
+            text="Resume"
+            iconBool={true}
+            reactIcon={<GrDocumentPdf />}
+            bgColor="pink"
+          />
           <ListBoxItem
             id="contact"
             link="/contact"

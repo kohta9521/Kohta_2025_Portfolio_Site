@@ -1,21 +1,90 @@
 .hero {
   position: relative;
-  top: 0;
+  //   top: 0;
   width: 100vw;
   height: 100vh;
   overflow: hidden; /* Splineコンテンツが親要素からはみ出さないようにする */
 
-  & > div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+  //   & > div {
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //   }
 
   canvas {
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  //   title
+  .titleBox {
+    position: absolute;
+    bottom: 13%;
+    left: 40px;
+    text-align: left;
+    color: #fff;
+    .subTitle {
+      display: block;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 16px;
+      line-height: 20px;
+    }
+    .title {
+      font-size: 45px;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .hero {
+    .titleBox {
+      position: absolute;
+      bottom: 50px;
+      left: 20px;
+      text-align: left;
+      color: #fff;
+      .subTitle {
+        display: block;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: auto;
+        margin-bottom: 15px;
+      }
+      .title {
+        display: block;
+        width: 95%;
+        font-size: 33px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    .titleBox {
+      position: absolute;
+      bottom: 50px;
+      left: 20px;
+      text-align: left;
+      color: #fff;
+      .subTitle {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: auto;
+        margin-bottom: 12px;
+      }
+      .title {
+        display: block;
+        width: 95%;
+        font-size: 28px;
+        font-weight: bold;
+      }
+    }
   }
 }
