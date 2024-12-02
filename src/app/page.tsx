@@ -16,6 +16,8 @@ import Header from "@/components/organism/Header";
 import ListItem from "@/components/molecules/ListItem";
 import Hero from "@/components/organism/Hero";
 import News from "@/components/organism/News";
+import About from "@/components/organism/About";
+// import LoadingScreen from "@/components/template/LoadingScreen";
 
 export default function Home() {
   return (
@@ -47,6 +49,7 @@ export default function Home() {
         />
       </Header>
       <Hero />
+      <About />
       <News />
     </div>
   );
