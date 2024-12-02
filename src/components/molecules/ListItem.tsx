@@ -7,8 +7,6 @@ import Link from "next/link";
 // types
 import { SubItem } from "@/types/types";
 
-// icons
-
 // scss
 import styles from "./styles/ListItem.module.scss";
 
