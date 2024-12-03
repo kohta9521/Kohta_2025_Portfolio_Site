@@ -14,7 +14,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: "Kohta 2025 Portfolio Site",
-  description: "kohtaの2025年版ポートフォリオサイト",
+  description: "kohta kochiの2025年版ポートフォリオサイト",
+  keywords:
+    "大学生, えんじにあ, 2025, エンジニア, ポートフォリオ, プログラミング, プログラム, IT業界, 開発者, フリーランス, キャリア, 技術スタック, プロジェクト",
 };
 
 export default function RootLayout({
