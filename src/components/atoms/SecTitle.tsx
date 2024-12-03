@@ -1,7 +1,11 @@
+"use client";
 import React from "react";
 
 // scss
 import styles from "./styles/SecTItle.module.scss";
+
+// hooks
+import useAOS from "@/hooks/useAOS";
 
 // props
 export type SecTitleProps = {
@@ -17,8 +21,9 @@ const SecTitle = ({
   jaTitle,
   enTitle,
 }: SecTitleProps) => {
+  useAOS();
   return (
-    <div className={styles.titleBox} key={id}>
+    <div className={styles.titleBox} key={id} data-aos="fade-up">
       <h2 className={`${styles[jaTitleSize]} ${styles.jaTitle}`}>{jaTitle}</h2>
       <h3 className={styles.enTitle}>{enTitle}</h3>
     </div>
