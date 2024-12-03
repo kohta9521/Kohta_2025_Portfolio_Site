@@ -4,17 +4,12 @@ import React from "react";
 import styles from "../styles/page.module.scss";
 
 // data
-import {
-  profileSubItems,
-  worksSubItems,
-  blogSubItems,
-} from "@/data/subItems";
+import { profileSubItems, worksSubItems, blogSubItems } from "@/data/subItems";
 
 // components
 import Header from "@/components/organism/Header";
 import ListItem from "@/components/molecules/ListItem";
 import Hero from "@/components/organism/Hero";
-import News from "@/components/organism/News";
 import About from "@/components/organism/About";
 
 export default function Home() {
@@ -42,7 +37,6 @@ export default function Home() {
       </Header>
       <Hero />
       <About />
-      <News />
     </div>
   );
 }
