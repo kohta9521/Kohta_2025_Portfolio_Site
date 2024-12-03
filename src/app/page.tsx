@@ -10,7 +10,6 @@ import { profileSubItems, worksSubItems, blogSubItems } from "@/data/subItems";
 import Header from "@/components/organism/Header";
 import ListItem from "@/components/molecules/ListItem";
 import Hero from "@/components/organism/Hero";
-import News from "@/components/organism/News";
 import About from "@/components/organism/About";
 
 export default function Home() {
