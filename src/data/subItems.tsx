@@ -17,7 +17,7 @@ import { MdOutlineDesignServices, MdMovieEdit } from "react-icons/md";
 export const aboutSubItems: SubItem[] = [
   {
     key: "about",
-    link: "/about/#profile",
+    link: "/about",
     reactIcon: <FaUser />,
     jaTitle: "自己紹介",
     enTitle: "My Profile",
