@@ -1,8 +1,12 @@
+"use client";
 import React from "react";
 
 // next
 import Link from "next/link";
 import Image from "next/image";
+
+// hooks
+import useAOS from "@/hooks/useAOS";
 
 // scss
 import styles from "./styles/AboutCard.module.scss";
@@ -25,8 +29,9 @@ const AboutCard = ({
   link,
   imgArray,
 }: AboutCardProps) => {
+  useAOS();
   return (
-    <div className={styles.card} key={id}>
+    <div className={styles.card} key={id} data-aos="fade-up">
       <div className={styles.left}>
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.desc}>{desc}</p>
