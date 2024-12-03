@@ -10,6 +10,7 @@ import { GrDocumentPdf } from "react-icons/gr";
 // components
 import Logo from "../atoms/Logo";
 import ListBoxItem from "../atoms/ListBoxItem";
+import HamburgerBtn from "../atoms/HamburgerBtn";
 
 // props
 export type HeaderProps = {
@@ -41,6 +42,7 @@ const Header = ({ id, children }: HeaderProps) => {
             bgColor="pink"
           />
         </div>
+        <HamburgerBtn />
       </div>
     </div>
   );
