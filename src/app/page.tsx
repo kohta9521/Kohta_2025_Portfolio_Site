@@ -5,7 +5,6 @@ import styles from "../styles/page.module.scss";
 
 // data
 import {
-  aboutSubItems,
   profileSubItems,
   worksSubItems,
   blogSubItems,
@@ -17,18 +16,11 @@ import ListItem from "@/components/molecules/ListItem";
 import Hero from "@/components/organism/Hero";
 import News from "@/components/organism/News";
 import About from "@/components/organism/About";
-// import LoadingScreen from "@/components/template/LoadingScreen";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <Header id="home">
-        {/* <ListItem
-          id="about"
-          mainLink="/about"
-          mainTitle="About"
-          subItems={aboutSubItems}
-        /> */}
         <ListItem
           id="profile"
           mainLink="/profile"
