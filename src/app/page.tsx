@@ -4,11 +4,7 @@ import React from "react";
 import styles from "../styles/page.module.scss";
 
 // data
-import {
-  profileSubItems,
-  worksSubItems,
-  blogSubItems,
-} from "@/data/subItems";
+import { profileSubItems, worksSubItems, blogSubItems } from "@/data/subItems";
 
 // components
 import Header from "@/components/organism/Header";
@@ -42,7 +38,6 @@ export default function Home() {
       </Header>
       <Hero />
       <About />
-      <News />
     </div>
   );
 }
