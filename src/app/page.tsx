@@ -23,12 +23,12 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <Header id="home">
-        <ListItem
+        {/* <ListItem
           id="about"
           mainLink="/about"
           mainTitle="About"
           subItems={aboutSubItems}
-        />
+        /> */}
         <ListItem
           id="profile"
           mainLink="/profile"

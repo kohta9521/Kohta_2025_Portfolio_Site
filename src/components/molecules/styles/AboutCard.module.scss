@@ -1,0 +1,67 @@
+.card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0px;
+  border-bottom: 0.1px solid rgb(77, 77, 77);
+  .left {
+    width: 45%;
+    .title {
+      font-size: 20px;
+      letter-spacing: 1.2;
+      line-height: 30px;
+      margin-bottom: 8px;
+    }
+    .desc {
+      font-size: 15px;
+      font-weight: 300;
+      letter-spacing: 0.9px;
+      line-height: 28.5px;
+      margin-bottom: 20px;
+    }
+    .link {
+      .linkText {
+        font-size: 14px;
+        line-height: 14px;
+        &:hover {
+          text-decoration: underline;
+          color: var(--primary);
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+  .right {
+    width: 45%;
+  }
+}
+
+// slide animation
+.sliderContainer {
+  position: relative;
+  overflow: hidden; /* スライダー外の画像を隠す */
+  width: 100%; /* 親要素に合わせる */
+  height: 150px;
+  border-radius: 10px;
+}
+
+.sliderTrack {
+  display: flex;
+  animation: slide 10s linear infinite; /* 無限ループアニメーション */
+}
+
+.image {
+  width: auto;
+  height: 100%; /* 高さをコンテナに合わせる */
+  flex-shrink: 0; /* サイズを縮めない */
+  margin-right: 20px;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* 1セット分左に移動 */
+  }
+}
