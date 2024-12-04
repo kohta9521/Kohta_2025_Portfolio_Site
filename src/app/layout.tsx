@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 // scss
 import "../styles/globals.scss";
 
+// next
+import { Analytics } from "@vercel/analytics/react";
+
 // google fonts
 import { IBM_Plex_Mono } from "next/font/google";
 
@@ -27,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={`${ibmPlexMono.variable}`}>{children}</body>
+      <Analytics />
     </html>
   );
 }
