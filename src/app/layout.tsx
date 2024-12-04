@@ -5,6 +5,7 @@ import "../styles/globals.scss";
 
 // next
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // google fonts
 import { IBM_Plex_Mono } from "next/font/google";
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={`${ibmPlexMono.variable}`}>{children}</body>
       <Analytics />
+      <SpeedInsights />
     </html>
   );
 }
