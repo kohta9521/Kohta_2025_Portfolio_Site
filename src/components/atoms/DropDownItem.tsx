@@ -25,8 +25,10 @@ const DropDownItem = ({
   return (
     <Link key={key} className={styles.button} href={link}>
       <div className={styles.icon}>{reactIcon}</div>
-      <p className={styles.jaTitle}>{jaTitle}</p>
-      <p className={styles.enTitle}>{enTitle}</p>
+      <div className={styles.box}>
+        <p className={styles.jaTitle}>{jaTitle}</p>
+        <p className={styles.enTitle}>{enTitle}</p>
+      </div>
     </Link>
   );
 };
