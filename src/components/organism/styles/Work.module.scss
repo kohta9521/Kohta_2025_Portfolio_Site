@@ -1,0 +1,46 @@
+.work {
+  width: 100%;
+  padding: 80px 0px 200px 0px;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .slideBox {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      margin-right: 30px; /* カードの余白 */
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+
+    .button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      margin: 0 8px;
+      cursor: pointer;
+      border-radius: 4px;
+
+      &:hover {
+        background: #555;
+      }
+    }
+  }
+}

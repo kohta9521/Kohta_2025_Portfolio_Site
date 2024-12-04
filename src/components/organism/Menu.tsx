@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./styles/Menu.module.scss";
 
 // data
-import { profileSubItems } from "@/data/subItems";
+import { profileSubItems, worksSubItems, blogSubItems } from "@/data/subItems";
 
 // components
 import DropDownMenu from "../molecules/DropDownMenu";
@@ -22,6 +22,8 @@ const Menu = ({ isOpen }: MenuProps) => {
         mainTitle="Profile"
         subItems={profileSubItems}
       />
+      <DropDownMenu id="work" mainTitle="Works" subItems={worksSubItems} />
+      <DropDownMenu id="blog" mainTitle="Blog" subItems={blogSubItems} />
     </div>
   );
 };
