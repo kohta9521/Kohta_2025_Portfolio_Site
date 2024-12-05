@@ -1,7 +1,7 @@
 import React from "react";
 
 // scss
-import styles from "./styles/Profile.module.scss";
+import styles from "./Profile.module.scss";
 
 // components
 import SubPageTemp from "@/components/template/SubPageTemp";

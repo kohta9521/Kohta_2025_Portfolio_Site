@@ -69,7 +69,7 @@ const Work = () => {
               <div key={work.id} className={styles.slide}>
                 <WorkCard
                   id={work.id}
-                  link={work.site_link || "#"}
+                  link={`/works/${work.id}`}
                   img={work.top_image?.url || "/images/home/blog.png"}
                   clientName={work.client}
                   title={work.title}
