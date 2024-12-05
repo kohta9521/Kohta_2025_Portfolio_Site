@@ -10,7 +10,7 @@ import useGetAllWorks from "@/hooks/useGetAllWorks";
 
 // components
 import SecTitle from "../atoms/SecTitle";
-import WorkCard, { WorkCardProps } from "../molecules/WorkCard";
+import WorkCard from "../molecules/WorkCard";
 import MainButton from "../atoms/MainButton";
 
 const Work = () => {

@@ -15,7 +15,7 @@ const Profile = () => {
       jaTitle="プロフィール"
       desc="自己紹介"
     >
-      <p>main content</p>
+      <p className={styles.title}>main content</p>
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime eaque,
         blanditiis eius dicta explicabo possimus nobis iste ullam nulla fugiat
