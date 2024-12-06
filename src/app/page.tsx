@@ -12,7 +12,6 @@ import ListItem from "@/components/molecules/ListItem";
 import Hero from "@/components/organism/Hero";
 import About from "@/components/organism/About";
 import Work from "@/components/organism/Work";
-import News from "@/components/organism/News";
 import Blog from "@/components/organism/Blog";
 import Contact from "@/components/organism/Contact";
 

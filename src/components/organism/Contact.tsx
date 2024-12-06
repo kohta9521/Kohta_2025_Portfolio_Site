@@ -5,7 +5,7 @@ import React from "react";
 import styles from "./styles/Contact.module.scss";
 
 // components
-import ContactContent from "../molecules/ContactContent";
+// import ContactContent from "../molecules/ContactContent";
 
 const Contact = () => {
   return (
