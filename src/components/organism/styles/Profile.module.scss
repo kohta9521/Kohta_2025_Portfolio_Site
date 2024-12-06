@@ -1,7 +1,7 @@
 .profile {
   width: 100%;
   height: auto;
-  padding: 20px 0px;
+  padding: 20px 0px 30px 0px;
   overflow: hidden;
   .container {
     max-width: 70%;
@@ -9,19 +9,66 @@
     .top {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 60px;
       .left {
-        width: 45%;
+        width: 450px;
+        height: 550px;
+        .image {
+          height: 100%;
+          width: auto;
+        }
       }
       .right {
         width: 45%;
+        padding-top: 40px;
+        .enName {
+          font-size: 12px;
+        }
+        .name {
+          font-size: 22px;
+          letter-spacing: 1.3px;
+          margin-bottom: 10px;
+        }
+        ul {
+          padding-left: 20px;
+          margin-bottom: 40px;
+          li {
+            font-size: 13px;
+            color: rgb(190, 190, 190);
+          }
+        }
+        .desc {
+          font-size: 13px;
+        }
       }
     }
     .bottom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
       .left {
+        .title {
+          color: var(--primary);
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
       }
       .center {
+        .title {
+          color: var(--primary);
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
       }
       .right {
+        .title {
+          color: var(--primary);
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
       }
     }
   }
