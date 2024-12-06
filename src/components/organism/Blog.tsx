@@ -2,32 +2,32 @@
 import React, { useState, useEffect } from "react";
 
 // scss
-import styles from "./styles/Work.module.scss";
+import styles from "./styles/Blog.module.scss";
 
 // hooks
 import useAOS from "@/hooks/useAOS";
-import useGetAllWorks from "@/hooks/useGetAllWorks";
+import useGetAllBlog from "@/hooks/useGetAllBlogs";
 
 // components
 import SecTitle from "../atoms/SecTitle";
-import WorkCard from "../molecules/WorkCard";
 import MainButton from "../atoms/MainButton";
+import BlogCard from "../molecules/BlogCard";
 
-const Work = () => {
+const Blog = () => {
   useAOS();
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardWidth, setCardWidth] = useState(600); // 初期値600px
+  const [cardWidth, setCardWidth] = useState(400); // 初期値600px
 
   // カードデータを取得
-  const works = useGetAllWorks();
+  const blogs = useGetAllBlog();
 
   // ウィンドウ幅に応じたカード幅を設定
   useEffect(() => {
     const updateCardWidth = () => {
       if (window.innerWidth <= 768) {
-        setCardWidth(280); // スマホ幅
+        setCardWidth(250); // スマホ幅
       } else {
-        setCardWidth(600); // デスクトップ幅
+        setCardWidth(400); // デスクトップ幅
       }
     };
 
@@ -40,23 +40,21 @@ const Work = () => {
   }, []);
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? works.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? blogs.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev >= works.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev >= blogs.length - 1 ? 0 : prev + 1));
   };
-
   return (
-    <div className={styles.work}>
+    <div className={styles.blog}>
       <div className={styles.container}>
         <SecTitle
-          id="work-title"
+          id="blog-title"
           jaTitleSize="default"
-          jaTitle="制作実績"
-          enTitle="Works"
+          jaTitle="ブログ記事"
+          enTitle="Blogs"
         />
-        {/* WorkCardコンポーネントを配置 */}
         <div className={styles.slideBox}>
           <div
             data-aos="fade-up"
@@ -65,21 +63,19 @@ const Work = () => {
               transform: `translateX(-${currentIndex * (cardWidth + 30)}px)`, // カード幅 + margin-right: 30px
             }}
           >
-            {works.map((work) => (
-              <div key={work.id} className={styles.slide}>
-                <WorkCard
-                  id={work.id}
-                  link={`/works/${work.id}`}
-                  img={work.top_image?.url || "/images/home/blog.png"}
-                  clientName={work.client}
-                  title={work.title}
-                  genre={work.category?.name || "No Genre"}
+            {blogs.map((blog) => (
+              <div key={blog.id} className={styles.slide}>
+                <BlogCard
+                  id={blog.id}
+                  title={blog.title}
+                  link={`/blogs/${blog.id}`}
+                  img={blog.topImage?.url || "/images/home/blog.png"}
+                  date={blog.createdAt}
                 />
               </div>
             ))}
           </div>
         </div>
-        {/* スライドの左右切り替えボタンと詳細ボタン */}
         <div className={styles.bottom} data-aos="fade-up">
           <div className={styles.left}>
             <button className={styles.button} onClick={handlePrev}>
@@ -91,9 +87,9 @@ const Work = () => {
           </div>
           <div className={styles.right}>
             <MainButton
-              id="work-more"
+              id="blog-more"
               text="もっと見る"
-              link="/works"
+              link="/blogs"
               size="medium"
             />
           </div>
@@ -103,4 +99,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Blog;
