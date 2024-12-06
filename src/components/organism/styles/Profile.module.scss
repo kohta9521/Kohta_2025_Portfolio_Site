@@ -4,7 +4,7 @@
   padding: 20px 0px 30px 0px;
   overflow: hidden;
   .container {
-    max-width: 70%;
+    width: 70%;
     margin: 0 auto;
     .top {
       display: flex;
@@ -77,18 +77,37 @@
 @media screen and (max-width: 1280px) {
   .profile {
     .container {
+      width: 90%;
       .top {
+        display: block;
         .left {
+          width: 100%;
         }
         .right {
+          width: 100%;
+          .enName {
+            font-size: 10px;
+          }
+          .name {
+            font-size: 18px;
+            letter-spacing: 1.3px;
+            margin-bottom: 10px;
+          }
+          ul {
+            margin-bottom: 20px;
+          }
         }
       }
       .bottom {
+        width: 100%;
         .left {
+          width: 33%;
         }
         .center {
+          width: 33%;
         }
         .right {
+          width: 33%;
         }
       }
     }
