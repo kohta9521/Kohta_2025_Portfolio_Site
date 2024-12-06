@@ -14,6 +14,7 @@ import About from "@/components/organism/About";
 import Work from "@/components/organism/Work";
 import Blog from "@/components/organism/Blog";
 import Contact from "@/components/organism/Contact";
+import Profile from "@/components/organism/Profile";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
       </Header>
       <Hero />
       <About />
+      <Profile />
       <Work />
       <Blog />
       <Contact />

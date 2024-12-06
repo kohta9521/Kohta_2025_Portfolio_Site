@@ -1,0 +1,49 @@
+.profile {
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+  overflow: hidden;
+  .container {
+    max-width: 70%;
+    margin: 0 auto;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      .left {
+        width: 45%;
+      }
+      .right {
+        width: 45%;
+      }
+    }
+    .bottom {
+      .left {
+      }
+      .center {
+      }
+      .right {
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .profile {
+    .container {
+      .top {
+        .left {
+        }
+        .right {
+        }
+      }
+      .bottom {
+        .left {
+        }
+        .center {
+        }
+        .right {
+        }
+      }
+    }
+  }
+}
