@@ -16,3 +16,5 @@ function useGetAllBlogs() {
 
   return blogs;
 }
+
+export default useGetAllBlogs;
