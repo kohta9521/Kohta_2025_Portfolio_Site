@@ -24,7 +24,7 @@ const BlogDetailPage = () => {
     <div className={styles.container}>
       <Image
         className={styles.image}
-        src={blog.topImage.url}
+        src={blog.top_image.url}
         width={1280}
         height={700}
         alt="image"

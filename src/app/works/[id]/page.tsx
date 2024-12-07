@@ -1,22 +1,32 @@
 "use client";
-import React from "react";
 
-// next
-// import { useRouter } from "next/router";
+import { useGetWorkById } from "@/hooks/useGetWorkById";
 
-// scss
-import styles from "./works_child.module.scss";
+import { useParams } from "next/navigation";
 
-// components
+import Image from "next/image";
 
-const WorksChild = () => {
+const WorkDetailPage = () => {
+  const { id } = useParams();
+  const workId = Array.isArray(id) ? id[0] : id;
+  const { work, error } = useGetWorkById(workId);
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+  if (!work) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div>
-      <div className={styles.main}>
-        <h1>hello</h1>
-      </div>
+      <Image src={work.top_image.url} width={1280} height={700} alt="image" />
+      <h1>{work.title}</h1>
+      <p>{work.genre}</p>
+      <div dangerouslySetInnerHTML={{ __html: work.content }} />
     </div>
   );
 };
 
-export default WorksChild;
+export default WorkDetailPage;
