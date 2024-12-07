@@ -7,6 +7,9 @@ import styles from "./styles/News.module.scss";
 // hooks
 import useGetAllNews from "@/hooks/useGetAllNews";
 
+// utils
+import { formatDate } from "@/utils/formatDate";
+
 // components
 import SecTitle from "../atoms/SecTitle";
 import NewsCard from "../molecules/NewsCard";
@@ -34,7 +37,7 @@ const News = () => {
               <NewsCard
                 id={item.id}
                 link={`/news/${item.id}`}
-                date={item.date}
+                date={formatDate(item.date)}
                 text={item.title}
                 genre={item.category.name}
               />

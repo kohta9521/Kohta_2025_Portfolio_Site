@@ -11,11 +11,11 @@ import useAOS from "@/hooks/useAOS";
 import styles from "./styles/Profile.module.scss";
 
 // data
-import { Backend, frontend, Others } from "@/data/langs";
+// import { Backend, frontend, Others } from "@/data/langs";
 
 // components
 import SecTitle from "../atoms/SecTitle";
-import SkillCard from "../molecules/SkillCard";
+// import SkillCard from "../molecules/SkillCard";
 
 const Profile = () => {
   useAOS();
@@ -63,7 +63,7 @@ const Profile = () => {
             </p>
           </div>
         </div>
-        <div className={styles.bottom} data-aos="fade-up">
+        {/* <div className={styles.bottom} data-aos="fade-up">
           <div className={styles.left}>
             <p className={styles.title}>Frontend</p>
             <div className={styles.contents}>
@@ -112,7 +112,7 @@ const Profile = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

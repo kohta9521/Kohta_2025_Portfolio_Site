@@ -1,10 +1,14 @@
 "use client";
 
-import { useGetWorkById } from "@/hooks/useGetWorkById";
-
+// next
 import { useParams } from "next/navigation";
 
-import Image from "next/image";
+// hooks
+import { useGetWorkById } from "@/hooks/useGetWorkById";
+
+// components
+import WorkTemp from "@/components/template/WorkTemp";
+import LoadingScreen from "@/components/template/LoadingScreen";
 
 const WorkDetailPage = () => {
   const { id } = useParams();
@@ -16,16 +20,22 @@ const WorkDetailPage = () => {
   }
 
   if (!work) {
-    return <p>Loading...</p>;
+    return <LoadingScreen />;
   }
 
   return (
-    <div>
-      <Image src={work.top_image.url} width={1280} height={700} alt="image" />
-      <h1>{work.title}</h1>
-      <p>{work.genre}</p>
-      <div dangerouslySetInnerHTML={{ __html: work.content }} />
-    </div>
+    <>
+      <WorkTemp
+        id={work.id}
+        client={work.client}
+        title={work.title}
+        desc={work.short_desc}
+        link={work.site_link}
+        img={work.top_image.url}
+      >
+        <div dangerouslySetInnerHTML={{ __html: work.content }} />
+      </WorkTemp>
+    </>
   );
 };
 
