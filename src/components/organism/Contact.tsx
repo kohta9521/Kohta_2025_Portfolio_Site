@@ -17,6 +17,9 @@ const Contact = () => {
         <div className={styles.box}>
           <h2 className={styles.title}>お問い合わせ</h2>
           <p className={styles.enTitle}>Contact</p>
+          <p className={styles.desc}>
+            お仕事の依頼やご相談など、お気軽にお話しましょう。
+          </p>
           <Link className={styles.link} href="/contact">
             <p className={styles.linkText}>話をしてみる</p>
           </Link>

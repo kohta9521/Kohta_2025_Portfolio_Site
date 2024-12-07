@@ -4,7 +4,12 @@ import React from "react";
 import styles from "../styles/page.module.scss";
 
 // data
-import { profileSubItems, worksSubItems, blogSubItems } from "@/data/subItems";
+import {
+  profileSubItems,
+  worksSubItems,
+  blogSubItems,
+  qaSubItems,
+} from "@/data/subItems";
 
 // components
 import Header from "@/components/organism/Header";
@@ -39,6 +44,12 @@ export default function Home() {
           mainLink="/blog"
           mainTitle="Blog"
           subItems={blogSubItems}
+        />
+        <ListItem
+          id="qa"
+          mainLink="/question"
+          mainTitle="Q&A"
+          subItems={qaSubItems}
         />
       </Header>
       <Hero />

@@ -12,10 +12,10 @@ import { profileSubItems, worksSubItems, blogSubItems } from "@/data/subItems";
 
 // scss
 import styles from "./styles/SubPageTemp.module.scss";
-import Header from "../organism/Header";
-import ListItem from "../molecules/ListItem";
 
 // components
+import Header from "../organism/Header";
+import ListItem from "../molecules/ListItem";
 
 // props
 export type SubPageTempProps = {
@@ -58,14 +58,14 @@ const SubPageTemp = ({
           subItems={blogSubItems}
         />
       </Header>
-      <Image
+      {/* <Image
         data-aos="fade-up"
         className={styles.topImage}
         src={img}
         width={400}
         height={400}
         alt="top-image"
-      />
+      /> */}
       <div className={styles.top}>
         <h1 className={styles.title} data-aos="fade-up">
           {enTitle}
