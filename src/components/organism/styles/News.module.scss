@@ -7,13 +7,34 @@
     height: 100%;
     margin: 0 auto;
     .content {
+      display: flex;
+      justify-content: space-between;
       .left {
-        width: 30%;
+        width: 25%;
         height: auto;
       }
       .right {
-        width: 60%;
+        width: 70%;
         height: auto;
+        border-top: 0.1px solid rgb(77, 77, 77);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .news {
+    .container {
+      width: 90%;
+      .content {
+        display: block;
+        .left {
+          width: 100%;
+          margin-bottom: 40px;
+        }
+        .right {
+          width: 100%;
+        }
       }
     }
   }
