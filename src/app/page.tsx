@@ -15,6 +15,8 @@ import Work from "@/components/organism/Work";
 import Blog from "@/components/organism/Blog";
 import Profile from "@/components/organism/Profile";
 import News from "@/components/organism/News";
+import Contact from "@/components/organism/Contact";
+import Footer from "@/components/organism/Footer";
 
 export default function Home() {
   return (
@@ -45,6 +47,8 @@ export default function Home() {
       <Work />
       <Blog />
       <News />
+      <Contact />
+      <Footer />
     </div>
   );
 }
