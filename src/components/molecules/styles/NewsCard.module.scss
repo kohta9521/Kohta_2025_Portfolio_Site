@@ -1,0 +1,32 @@
+.news {
+  width: 100%;
+  height: auto;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1px solid rgb(77, 77, 77);
+
+  .genre {
+    display: block;
+    width: 200px;
+  }
+  .date {
+    display: block;
+    width: 150px;
+  }
+  .text {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .news {
+    .genre {
+    }
+    .date {
+    }
+    .text {
+    }
+  }
+}

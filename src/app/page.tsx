@@ -13,8 +13,8 @@ import Hero from "@/components/organism/Hero";
 import About from "@/components/organism/About";
 import Work from "@/components/organism/Work";
 import Blog from "@/components/organism/Blog";
-import Contact from "@/components/organism/Contact";
 import Profile from "@/components/organism/Profile";
+import News from "@/components/organism/News";
 
 export default function Home() {
   return (
@@ -44,7 +44,7 @@ export default function Home() {
       <Profile />
       <Work />
       <Blog />
-      <Contact />
+      <News />
     </div>
   );
 }
