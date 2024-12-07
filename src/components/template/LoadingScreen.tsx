@@ -1,4 +1,6 @@
 import React from "react";
+
+// scss
 import styles from "./styles/LoadingScreen.module.scss";
 
 const LoadingScreen = () => {

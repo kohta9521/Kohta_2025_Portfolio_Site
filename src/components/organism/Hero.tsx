@@ -4,14 +4,14 @@ import React from "react";
 import styles from "./styles/Hero.module.scss";
 
 // spline
-// import Spline from "@splinetool/react-spline/next";
+import Spline from "@splinetool/react-spline/next";
 
 // components
 
 const Hero = () => {
   return (
     <div className={styles.hero}>
-      {/* <Spline scene="https://prod.spline.design/2xBjYs9kFeqH7Uey/scene.splinecode" /> */}
+      <Spline scene="https://prod.spline.design/2xBjYs9kFeqH7Uey/scene.splinecode" />
       <div className={styles.titleBox}>
         <p className={styles.subTitle}>kohta kochi</p>
         <h1 className={styles.title}>

@@ -1,0 +1,71 @@
+.page {
+  .hero {
+    padding-top: 200px;
+    width: 85%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    .client {
+      font-size: 14px;
+      line-height: 17.5px;
+      margin-bottom: 12px;
+    }
+    .title {
+      font-size: 46px;
+      line-height: 56px;
+      margin-bottom: 32px;
+    }
+    .desc {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 14px;
+    }
+    .link {
+      display: flex;
+      align-items: center;
+      margin-bottom: 70px;
+      text-decoration: underline;
+      .linkText {
+        font-size: 14px;
+        margin-right: 10px;
+      }
+      .linkIcon {
+        width: 14px;
+        height: 14px;
+      }
+    }
+    .image {
+      width: 100%;
+      box-shadow: 0px 11px 39px 6px #77777746;
+      border-radius: 10px;
+    }
+  }
+  .container {
+    width: 60%;
+    margin: 0 auto;
+    // html tag setting
+    h1 {
+      font-size: 36px;
+      line-height: 43px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 24px;
+      line-height: 29px;
+      margin: 70px 0px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+      li {
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

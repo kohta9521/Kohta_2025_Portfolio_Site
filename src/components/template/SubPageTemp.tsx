@@ -20,21 +20,12 @@ import ListItem from "../molecules/ListItem";
 // props
 export type SubPageTempProps = {
   id: string;
-  img: string;
-  enTitle: string;
   jaTitle: string;
-  desc: string;
+  enTitle: string;
   children: React.ReactNode;
 };
 
-const SubPageTemp = ({
-  id,
-  img,
-  enTitle,
-  jaTitle,
-  desc,
-  children,
-}: SubPageTempProps) => {
+const SubPageTemp = ({ id, jaTitle, enTitle, children }: SubPageTempProps) => {
   useAOS();
   return (
     <div className={styles.page} key={id}>
@@ -58,24 +49,9 @@ const SubPageTemp = ({
           subItems={blogSubItems}
         />
       </Header>
-      {/* <Image
-        data-aos="fade-up"
-        className={styles.topImage}
-        src={img}
-        width={400}
-        height={400}
-        alt="top-image"
-      /> */}
       <div className={styles.top}>
-        <h1 className={styles.title} data-aos="fade-up">
-          {enTitle}
-        </h1>
-        <h2 className={styles.jaTitle} data-aos="fade-up">
-          {jaTitle}
-        </h2>
-        <p className={styles.desc} data-aos="fade-up">
-          {desc}
-        </p>
+        <h1 className={styles.jaTitle}>{jaTitle}</h1>
+        <p className={styles.enTitle}>{enTitle}</p>
       </div>
       <div className={styles.container}>{children}</div>
     </div>
