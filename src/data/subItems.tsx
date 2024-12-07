@@ -138,6 +138,16 @@ export const blogSubItems: SubItem[] = [
   },
 ];
 
+export const qaSubItems: SubItem[] = [
+  {
+    key: "qa",
+    link: "/qa/#qa",
+    reactIcon: <FaUser />,
+    jaTitle: "よくある質問",
+    enTitle: "Q&A",
+  },
+];
+
 export const contactSubItems: SubItem[] = [
   {
     key: "contact",

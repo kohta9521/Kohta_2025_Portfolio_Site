@@ -1,0 +1,30 @@
+.page {
+  .top {
+    margin-top: 80px;
+    .title {
+    }
+    .jaTitle {
+    }
+    .desc {
+    }
+  }
+  // main content
+  .container {
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .page {
+    .top {
+      .title {
+      }
+      .jaTitle {
+      }
+      .desc {
+      }
+    }
+    // main content
+    .container {
+    }
+  }
+}

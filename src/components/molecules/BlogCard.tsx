@@ -12,14 +12,14 @@ import styles from "./styles/BlogCard.module.scss";
 export type BlogCardProps = {
   id: string;
   title: string;
-  link: string;
   img: string;
+  link: string;
   date: string;
 };
 
 const BlogCard = ({ id, title, link, img, date }: BlogCardProps) => {
   return (
-    <Link className={styles.card} key={id} href={`/blog/${link}`}>
+    <Link className={styles.card} key={id} href={link}>
       <Image
         className={styles.image}
         src={img}

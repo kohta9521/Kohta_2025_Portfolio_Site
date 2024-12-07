@@ -4,7 +4,12 @@ import React from "react";
 import styles from "../styles/page.module.scss";
 
 // data
-import { profileSubItems, worksSubItems, blogSubItems } from "@/data/subItems";
+import {
+  profileSubItems,
+  worksSubItems,
+  blogSubItems,
+  qaSubItems,
+} from "@/data/subItems";
 
 // components
 import Header from "@/components/organism/Header";
@@ -15,6 +20,8 @@ import Work from "@/components/organism/Work";
 import Blog from "@/components/organism/Blog";
 import Profile from "@/components/organism/Profile";
 import News from "@/components/organism/News";
+import Contact from "@/components/organism/Contact";
+import Footer from "@/components/organism/Footer";
 
 export default function Home() {
   return (
@@ -38,6 +45,12 @@ export default function Home() {
           mainTitle="Blog"
           subItems={blogSubItems}
         />
+        <ListItem
+          id="qa"
+          mainLink="/question"
+          mainTitle="Q&A"
+          subItems={qaSubItems}
+        />
       </Header>
       <Hero />
       <About />
@@ -45,6 +58,8 @@ export default function Home() {
       <Work />
       <Blog />
       <News />
+      <Contact />
+      <Footer />
     </div>
   );
 }
