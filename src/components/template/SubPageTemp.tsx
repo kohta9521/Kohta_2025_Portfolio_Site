@@ -2,7 +2,8 @@
 import React from "react";
 
 // next
-import Image from "next/image";
+// import Image from "next/image";
+import Link from "next/link";
 
 // hooks
 import useAOS from "@/hooks/useAOS";
@@ -17,15 +18,29 @@ import styles from "./styles/SubPageTemp.module.scss";
 import Header from "../organism/Header";
 import ListItem from "../molecules/ListItem";
 
+// type
+export type SubPageSecType = {
+  id: string;
+  title: string;
+  link: string;
+};
+
 // props
 export type SubPageTempProps = {
   id: string;
   jaTitle: string;
   enTitle: string;
+  sectionArray?: SubPageSecType[];
   children: React.ReactNode;
 };
 
-const SubPageTemp = ({ id, jaTitle, enTitle, children }: SubPageTempProps) => {
+const SubPageTemp = ({
+  id,
+  jaTitle,
+  enTitle,
+  sectionArray = [],
+  children,
+}: SubPageTempProps) => {
   useAOS();
   return (
     <div className={styles.page} key={id}>
@@ -50,8 +65,15 @@ const SubPageTemp = ({ id, jaTitle, enTitle, children }: SubPageTempProps) => {
         />
       </Header>
       <div className={styles.top}>
-        <h1 className={styles.jaTitle}>{jaTitle}</h1>
-        <p className={styles.enTitle}>{enTitle}</p>
+        <p className={styles.jaTitle}>{jaTitle}</p>
+        <h1 className={styles.enTitle}>{enTitle}</h1>
+        <div className={styles.linkArea}>
+          {sectionArray.map((i) => (
+            <Link key={i.id} className={styles.link} href={i.link}>
+              <p className={styles.text}>{i.title}</p>
+            </Link>
+          ))}
+        </div>
       </div>
       <div className={styles.container}>{children}</div>
     </div>
