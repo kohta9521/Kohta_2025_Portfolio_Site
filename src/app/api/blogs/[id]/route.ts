@@ -3,9 +3,13 @@ import { client } from "@/libs/client";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: { [key: string]: string } } // 動的なキーを持つ型を指定
 ) {
-  const { id } = params;
+  const { id } = context.params; // params から id を取得
+
+  if (!id) {
+    return NextResponse.json({ error: "ID is required" }, { status: 400 });
+  }
 
   try {
     const data = await client.get({

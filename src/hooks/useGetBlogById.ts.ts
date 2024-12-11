@@ -2,8 +2,11 @@
 
 import { useState, useEffect } from "react";
 
+// type
+import { Blog } from "@/types/blog";
+
 export function useGetBlogById(id: string | undefined) {
-  const [blog, setBlog] = useState<any>(null);
+  const [blog, setBlog] = useState<Blog | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -14,7 +17,7 @@ export function useGetBlogById(id: string | undefined) {
         if (!res.ok) throw new Error("Failed to fetch blog");
         return res.json();
       })
-      .then((data) => setBlog(data))
+      .then((data: Blog) => setBlog(data))
       .catch((err) => {
         console.error("Error fetching blog:", err);
         setError(err.message);

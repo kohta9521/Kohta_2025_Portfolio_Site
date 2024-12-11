@@ -18,6 +18,7 @@ import styles from "./styles/SubPageTemp.module.scss";
 import Header from "../organism/Header";
 import ListItem from "../molecules/ListItem";
 import Contact from "../organism/Contact";
+import Footer from "../organism/Footer";
 
 // type
 export type SubPageSecType = {
@@ -81,6 +82,7 @@ const SubPageTemp = ({
       </div>
       <div className={styles.container}>{children}</div>
       <Contact />
+      <Footer />
     </div>
   );
 };

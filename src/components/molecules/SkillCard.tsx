@@ -30,7 +30,12 @@ const SkillCard = ({
         <p className={styles.name}>{name}</p>
       </div>
       {/* hover div */}
-      <div className={styles.hoverEvent}></div>
+      <div className={styles.hoverEvent}>
+        <p>{version}</p>
+        <p>{years}</p>
+        <p>{skill}</p>
+        <p>{desc}</p>
+      </div>
     </>
   );
 };

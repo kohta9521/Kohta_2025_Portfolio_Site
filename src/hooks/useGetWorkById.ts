@@ -2,8 +2,11 @@
 
 import { useState, useEffect } from "react";
 
+// type
+import { Work } from "@/types/works";
+
 export function useGetWorkById(id: string | undefined) {
-  const [work, setWork] = useState<any>(null);
+  const [work, setWork] = useState<Work[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -23,4 +26,3 @@ export function useGetWorkById(id: string | undefined) {
 
   return { work, error };
 }
-// Compare this snippet from src/hooks/useGetBlogById.ts.ts:

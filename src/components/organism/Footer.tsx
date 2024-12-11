@@ -10,12 +10,12 @@ import styles from "./styles/Footer.module.scss";
 import Logo from "../atoms/Logo";
 
 // data
-import {
-  profileSubItems,
-  worksSubItems,
-  blogSubItems,
-  qaSubItems,
-} from "@/data/subItems";
+// import {
+//   profileSubItems,
+//   worksSubItems,
+//   blogSubItems,
+//   qaSubItems,
+// } from "@/data/subItems";
 
 // type
 export type snsArray = {
