@@ -35,6 +35,7 @@ const News = () => {
           <div className={styles.right}>
             {news.map((item) => (
               <NewsCard
+                key={item.id}
                 id={item.id}
                 link={`/news/${item.id}`}
                 date={formatDate(item.date)}

@@ -10,10 +10,15 @@ const Profile = () => {
   return (
     <SubPageTemp
       id="profile"
-      img="/images/home/blog.png"
       enTitle="PROFILE"
       jaTitle="プロフィール"
-      desc="自己紹介"
+      sectionArray={[
+        { id: "profile", title: "Profile", link: "/" },
+        { id: "career", title: "Career", link: "/profile/#career" },
+        { id: "skills", title: "Skills", link: "/profile/#skills" },
+        { id: "future", title: "Future Career", link: "/profile/#future" },
+        { id: "hobby", title: "Hobby", link: "/profile/#hobby" },
+      ]}
     >
       <p className={styles.title}>main content</p>
       <p>

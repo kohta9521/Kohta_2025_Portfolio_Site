@@ -1,11 +1,20 @@
 .page {
   .top {
-    margin-top: 80px;
-    .title {
-    }
+    width: 60%;
+    margin: 100px auto;
+    padding: 100px;
     .jaTitle {
+      font-size: 18px;
     }
-    .desc {
+    .enTitle {
+      font-size: 40px;
+    }
+    .linkArea {
+      .link {
+        .text {
+
+        }
+      }
     }
   }
   // main content
