@@ -30,6 +30,7 @@ export type SubPageTempProps = {
   id: string;
   jaTitle: string;
   enTitle: string;
+  desc: string;
   sectionArray?: SubPageSecType[];
   children: React.ReactNode;
 };
@@ -38,6 +39,7 @@ const SubPageTemp = ({
   id,
   jaTitle,
   enTitle,
+  desc,
   sectionArray = [],
   children,
 }: SubPageTempProps) => {
@@ -67,6 +69,7 @@ const SubPageTemp = ({
       <div className={styles.top}>
         <p className={styles.jaTitle}>{jaTitle}</p>
         <h1 className={styles.enTitle}>{enTitle}</h1>
+        <p className={styles.desc}>{desc}</p>
         <div className={styles.linkArea}>
           {sectionArray.map((i) => (
             <Link key={i.id} className={styles.link} href={i.link}>

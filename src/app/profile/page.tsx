@@ -12,6 +12,7 @@ const Profile = () => {
       id="profile"
       enTitle="PROFILE"
       jaTitle="プロフィール"
+      desc="私に関する情報をご紹介します。"
       sectionArray={[
         { id: "profile", title: "Profile", link: "/" },
         { id: "career", title: "Career", link: "/profile/#career" },

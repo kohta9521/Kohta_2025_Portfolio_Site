@@ -1,39 +1,83 @@
 .page {
   .top {
-    width: 60%;
+    position: relative;
+    width: 80%;
     margin: 100px auto;
-    padding: 100px;
+    padding: 60px 50px;
+    border-radius: 40px;
+    background-color: var(--primary);
     .jaTitle {
       font-size: 18px;
+      line-height: 20px;
     }
     .enTitle {
       font-size: 40px;
     }
+    .desc {
+      font-size: 14px;
+    }
     .linkArea {
+      position: absolute;
+      bottom: -50px;
+      right: 100px;
+      display: flex;
+      width: auto;
+      padding: 50px;
+      background-color: black;
+      border-radius: 20px;
+      border: 1px solid var(--primary);
       .link {
+        display: block;
+        margin-right: 20px;
+        width: auto;
+        &:hover .text {
+          color: var(--primary);
+          transition: all 0.3s ease;
+        }
         .text {
-
+          color: white;
         }
       }
     }
   }
   // main content
   .container {
+    width: 60%;
+    margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 1280px) {
   .page {
     .top {
-      .title {
-      }
+      width: 90%;
+      margin-bottom: 50px;
+      padding: 30px 20px;
+      border-radius: 10px;
       .jaTitle {
+        font-size: 13px;
+      }
+      .enTitle {
+        font-size: 22px;
       }
       .desc {
+      }
+      .linkArea {
+        display: none;
+        bottom: -50px;
+        padding: 20px;
+        right: 0;
+        left: 0;
+        .link {
+          margin-right: 10px;
+          .text {
+          }
+        }
       }
     }
     // main content
     .container {
+      width: 85%;
     }
   }
 }
