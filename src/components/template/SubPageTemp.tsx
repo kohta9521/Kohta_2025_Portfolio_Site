@@ -17,6 +17,8 @@ import styles from "./styles/SubPageTemp.module.scss";
 // components
 import Header from "../organism/Header";
 import ListItem from "../molecules/ListItem";
+import Contact from "../organism/Contact";
+import Footer from "../organism/Footer";
 
 // type
 export type SubPageSecType = {
@@ -30,6 +32,7 @@ export type SubPageTempProps = {
   id: string;
   jaTitle: string;
   enTitle: string;
+  desc: string;
   sectionArray?: SubPageSecType[];
   children: React.ReactNode;
 };
@@ -38,6 +41,7 @@ const SubPageTemp = ({
   id,
   jaTitle,
   enTitle,
+  desc,
   sectionArray = [],
   children,
 }: SubPageTempProps) => {
@@ -67,6 +71,7 @@ const SubPageTemp = ({
       <div className={styles.top}>
         <p className={styles.jaTitle}>{jaTitle}</p>
         <h1 className={styles.enTitle}>{enTitle}</h1>
+        <p className={styles.desc}>{desc}</p>
         <div className={styles.linkArea}>
           {sectionArray.map((i) => (
             <Link key={i.id} className={styles.link} href={i.link}>
@@ -76,6 +81,8 @@ const SubPageTemp = ({
         </div>
       </div>
       <div className={styles.container}>{children}</div>
+      <Contact />
+      <Footer />
     </div>
   );
 };

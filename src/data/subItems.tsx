@@ -131,7 +131,7 @@ export const worksSubItems: SubItem[] = [
 export const blogSubItems: SubItem[] = [
   {
     key: "blog",
-    link: "/blog/#blog",
+    link: "/blogs",
     reactIcon: <FaUser />,
     jaTitle: "ブログ",
     enTitle: "Blog",
@@ -141,7 +141,7 @@ export const blogSubItems: SubItem[] = [
 export const qaSubItems: SubItem[] = [
   {
     key: "qa",
-    link: "/qa/#qa",
+    link: "/questions",
     reactIcon: <FaUser />,
     jaTitle: "よくある質問",
     enTitle: "Q&A",

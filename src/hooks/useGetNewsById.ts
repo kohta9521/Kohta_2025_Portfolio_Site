@@ -2,8 +2,11 @@
 
 import { useState, useEffect } from "react";
 
+// type
+import { News } from "@/types/news";
+
 export function useGetNewsById(id: string | undefined) {
-  const [news, setNews] = useState<any>(null);
+  const [news, setNews] = useState<News | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -14,7 +17,7 @@ export function useGetNewsById(id: string | undefined) {
         if (!res.ok) throw new Error("Failed to fetch news");
         return res.json();
       })
-      .then((data) => setNews(data))
+      .then((data: News) => setNews(data))
       .catch((err) => {
         console.error("Error fetching news:", err);
         setError(err.message);
