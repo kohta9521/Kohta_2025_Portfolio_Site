@@ -1,0 +1,69 @@
+.boxArea {
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.questionBox {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #000000;
+  cursor: pointer;
+
+  &:hover {
+    border: #ff5151;
+  }
+}
+
+.icon {
+  margin-right: 0.5rem;
+  color: #ff0000;
+}
+
+.questionText {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.answerBox {
+  padding: 1rem;
+  background-color: #000000;
+  border-top: 1px solid #ddd;
+
+  .answerText {
+    font-size: 0.875rem;
+    color: #c3c3c3;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .questionText {
+    font-size: 0.95rem;
+  }
+
+  .answerText {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .questionBox {
+    padding: 0.8rem;
+  }
+
+  .answerBox {
+    padding: 0.8rem;
+  }
+
+  .questionText {
+    font-size: 0.875rem;
+  }
+
+  .answerText {
+    font-size: 0.75rem;
+  }
+}

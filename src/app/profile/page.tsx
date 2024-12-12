@@ -23,25 +23,12 @@ const Profile = () => {
         { id: "hobby", title: "Hobby", link: "/profile/#hobby" },
       ]}
     >
-      <SubTitle id="profile" size="h1" text="Profile" />
+      <SubTitle id="#profile" size="h1" text="Profile" />
       <SubText
-        id="profile"
+        id="#profile"
         text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolores harum est ratione saepe ea repudiandae quo? Placeat optio deleniti ex iusto possimus? Voluptas tempore odio obcaecati tenetur quos sit."
         size="Default"
       />
-      <SubText
-        id="profile"
-        text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolores harum est ratione saepe ea repudiandae quo? Placeat optio deleniti ex iusto possimus? Voluptas tempore odio obcaecati tenetur quos sit."
-        size="Small"
-      />
-      <SubText
-        id="profile"
-        text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolores harum est ratione saepe ea repudiandae quo? Placeat optio deleniti ex iusto possimus? Voluptas tempore odio obcaecati tenetur quos sit."
-        size="Large"
-      />
-      <SubTitle id="profile" size="h2" text="Profile" />
-      <SubTitle id="profile" size="h3" text="Profile" />
-      <SubTitle id="profile" size="h4" text="Profile" />
     </SubPageTemp>
   );
 };
