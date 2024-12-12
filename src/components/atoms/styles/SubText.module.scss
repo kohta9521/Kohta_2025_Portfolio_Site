@@ -1,0 +1,55 @@
+.text {
+  line-height: 1.6; /* 基本的な行間を設定 */
+  color: #ffffff; /* 読みやすい濃いめの文字色 */
+  margin-bottom: 1rem; /* 適切な下マージンを追加 */
+}
+
+.Default {
+  font-size: 1rem; /* 基本サイズ */
+}
+
+.Small {
+  font-size: 0.875rem; /* 小さめのフォントサイズ */
+  color: #a2a2a2; /* 少し薄めの文字色 */
+}
+
+.Large {
+  font-size: 1.25rem; /* 大きめのフォントサイズ */
+  font-weight: bold; /* 強調のため太字に */
+}
+
+@media screen and (max-width: 1280px) {
+  .text {
+    line-height: 1.5; /* 行間を少し詰める */
+  }
+
+  .Default {
+    font-size: 0.95rem; /* フォントサイズを微調整 */
+  }
+
+  .Small {
+    font-size: 0.8rem;
+  }
+
+  .Large {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text {
+    line-height: 1.4; /* モバイル向けにさらに詰める */
+  }
+
+  .Default {
+    font-size: 0.875rem; /* 基本サイズを縮小 */
+  }
+
+  .Small {
+    font-size: 0.75rem;
+  }
+
+  .Large {
+    font-size: 1rem; /* 大きめもモバイル用に調整 */
+  }
+}
