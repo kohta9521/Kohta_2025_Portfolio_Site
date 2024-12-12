@@ -3,7 +3,7 @@ import { client } from "@/libs/client";
 
 export async function GET(
   req: NextRequest,
-  context: { params: { [key: string]: string } } // 動的なキーを持つ型を指定
+  context: { params: { id: string } } // id のみを指定
 ) {
   const { id } = context.params; // params から id を取得
 
