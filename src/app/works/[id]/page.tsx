@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 import { useGetWorkById } from "@/hooks/useGetWorkById";
 
 // components
-import WorkTemp from "@/components/template/WorkTemp";
+// import WorkTemp from "@/components/template/WorkTemp";
 import LoadingScreen from "@/components/template/LoadingScreen";
 
 const WorkDetailPage = () => {
@@ -23,20 +23,7 @@ const WorkDetailPage = () => {
     return <LoadingScreen />;
   }
 
-  return (
-    <>
-      <WorkTemp
-        id={work.id}
-        client={work.client}
-        title={work.title}
-        desc={work.short_desc}
-        link={work.site_link}
-        img={work.top_image.url}
-      >
-        <div dangerouslySetInnerHTML={{ __html: work.content }} />
-      </WorkTemp>
-    </>
-  );
+  return <></>;
 };
 
 export default WorkDetailPage;

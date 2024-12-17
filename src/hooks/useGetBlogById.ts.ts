@@ -1,8 +1,5 @@
 "use client";
-
 import { useState, useEffect } from "react";
-
-
 
 // type
 import { Blog } from "@/types/blog";

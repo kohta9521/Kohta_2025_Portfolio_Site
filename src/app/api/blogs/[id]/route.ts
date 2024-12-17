@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { client } from "@/libs/client";
 
+// 非同期に `id` を取得
 export async function GET(
   req: NextRequest,
-  context: { params: { id: string } } // id のみを指定
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = context.params; // params から id を取得
+  const { id } = await params; // 非同期で id を取得
 
   if (!id) {
     return NextResponse.json({ error: "ID is required" }, { status: 400 });
