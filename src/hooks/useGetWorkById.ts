@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { Work } from "@/types/works";
 
 export function useGetWorkById(id: string | undefined) {
-  const [work, setWork] = useState<Work[] | null>(null);
+  const [work, setWork] = useState<Work | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
