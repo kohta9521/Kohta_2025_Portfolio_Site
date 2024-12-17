@@ -41,7 +41,7 @@ export default function Home() {
         />
         <ListItem
           id="blog"
-          mainLink="/blog"
+          mainLink="/blogs"
           mainTitle="Blog"
           subItems={blogSubItems}
         />

@@ -1,7 +1,10 @@
 "use client";
 
-import { useGetBlogById } from "@/hooks/useGetBlogById.ts";
+// next
 import { useParams } from "next/navigation";
+
+// hooks
+import { useGetBlogById } from "@/hooks/useGetBlogById.ts";
 
 import styles from "./BlogId.module.scss";
 
