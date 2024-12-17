@@ -42,7 +42,7 @@ export const Default: SubTitleStory = {
   },
 };
 
-export const h2: SubTitleStory = {
+export const Small: SubTitleStory = {
   args: {
     id: "sub-title",
     size: "h2",

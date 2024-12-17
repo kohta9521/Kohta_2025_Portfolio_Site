@@ -27,7 +27,7 @@ const Header = ({ id, children }: HeaderProps) => {
         <div className={styles.rightBox}>
           <ListBoxItem
             id="resume"
-            link="/resume"
+            link="/pdf/portfolio.pdf"
             text="Resume"
             iconBool={true}
             reactIcon={<GrDocumentPdf />}

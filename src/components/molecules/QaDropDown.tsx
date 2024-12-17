@@ -25,7 +25,7 @@ const QaDropDown = ({ id, question, answer }: QaDropDownProps) => {
   };
 
   return (
-    <div className={styles.boxArea}>
+    <div className={styles.boxArea} key={id}>
       <div className={styles.questionBox} onClick={toggleDropdown}>
         <FaQuestion className={styles.icon} />
         <span className={styles.questionText}>{question}</span>
