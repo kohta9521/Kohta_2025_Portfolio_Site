@@ -1,7 +1,7 @@
 import React from "react";
 
 // scss
-import styles from "./Profile.module.scss";
+// import styles from "./Profile.module.scss";
 
 // components
 import SubPageTemp from "@/components/template/SubPageTemp";
@@ -29,6 +29,10 @@ const Profile = () => {
         text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolores harum est ratione saepe ea repudiandae quo? Placeat optio deleniti ex iusto possimus? Voluptas tempore odio obcaecati tenetur quos sit."
         size="Default"
       />
+      <SubTitle id="#career" size="h1" text="Career" />
+      <SubTitle id="#skills" size="h1" text="Skills" />
+      <SubTitle id="#future" size="h1" text="Future" />
+      <SubTitle id="#hobby" size="h1" text="Hobby" />
     </SubPageTemp>
   );
 };

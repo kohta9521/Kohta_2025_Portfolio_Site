@@ -27,7 +27,12 @@ const Questions = () => {
       />
       <div className={styles.dropBox}>
         {questionsItems.map((item) => (
-          <QaDropDown id={item.id} question={item.qText} answer={item.aText} />
+          <QaDropDown
+            key={item.id}
+            id={item.id}
+            question={item.qText}
+            answer={item.aText}
+          />
         ))}
       </div>
     </SubPageTemp>
