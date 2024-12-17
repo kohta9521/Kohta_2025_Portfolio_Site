@@ -6,9 +6,12 @@ import { useParams } from "next/navigation";
 // hooks
 import { useGetBlogById } from "@/hooks/useGetBlogById.ts";
 
-import styles from "./BlogId.module.scss";
+// scss
+// import styles from "./BlogId.module.scss";
 
-import Image from "next/image";
+// components
+import BlogTemp from "@/components/template/BlogTemp";
+import LoadingScreen from "@/components/template/LoadingScreen";
 
 const BlogDetailPage = () => {
   const { id } = useParams();
@@ -20,27 +23,21 @@ const BlogDetailPage = () => {
   }
 
   if (!blog) {
-    return <p className={styles.loading}>Loading...</p>;
+    return <LoadingScreen />;
   }
 
   return (
-    <div className={styles.container}>
-      <Image
-        className={styles.image}
-        src={blog.topImage.url}
-        width={1280}
-        height={700}
-        alt="image"
-      />
-      <h1 className={styles.title}>{blog.title}</h1>
-      <p className={styles.date}>
-        {new Date(blog.publishedAt).toLocaleDateString()}
-      </p>
-      <div
-        className={styles.content}
-        dangerouslySetInnerHTML={{ __html: blog.body }}
-      />
-    </div>
+    <>
+      <BlogTemp
+        id={blog.id}
+        title={blog.title}
+        img={blog.topImage.url}
+        createdAt={blog.createdAt}
+        updatedAt={blog.updatedAt}
+      >
+        <div dangerouslySetInnerHTML={{ __html: blog.body }} />
+      </BlogTemp>
+    </>
   );
 };
 
