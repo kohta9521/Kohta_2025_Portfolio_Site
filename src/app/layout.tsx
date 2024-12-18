@@ -6,7 +6,7 @@ import "../styles/globals.scss";
 
 // next
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+// import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // const ibmPlexMono = IBM_Plex_Mono({
 //   subsets: ["latin"],
