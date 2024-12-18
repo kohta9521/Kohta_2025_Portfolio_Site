@@ -1,3 +1,4 @@
+// next
 import type { Metadata } from "next";
 
 // scss
@@ -5,16 +6,13 @@ import "../styles/globals.scss";
 
 // next
 import { Analytics } from "@vercel/analytics/react";
-// import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-// google fonts
-import { IBM_Plex_Mono } from "next/font/google";
-
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-ibm-plex-mono",
-});
+// const ibmPlexMono = IBM_Plex_Mono({
+//   subsets: ["latin"],
+//   weight: ["400", "700"],
+//   variable: "--font-ibm-plex-mono",
+// });
 
 export const metadata: Metadata = {
   title: "Kohta 2025 Portfolio Site",
@@ -30,9 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={`${ibmPlexMono.variable}`}>{children}</body>
+      <body>{children}</body>
       <Analytics />
-      {/* <SpeedInsights /> */}
     </html>
   );
 }
