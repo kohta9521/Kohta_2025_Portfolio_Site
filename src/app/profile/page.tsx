@@ -26,7 +26,7 @@ const Profile = () => {
       <SubTitle id="#profile" size="h1" text="Profile" />
       <SubText
         id="#profile"
-        text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque dolores harum est ratione saepe ea repudiandae quo? Placeat optio deleniti ex iusto possimus? Voluptas tempore odio obcaecati tenetur quos sit."
+        text="まずはこのサイトをご覧いただきありがとうございます。"
         size="Default"
       />
       <SubTitle id="#career" size="h1" text="Career" />
