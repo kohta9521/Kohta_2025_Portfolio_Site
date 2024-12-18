@@ -12,6 +12,7 @@ import { useGetBlogById } from "@/hooks/useGetBlogById.ts";
 // components
 import BlogTemp from "@/components/template/BlogTemp";
 import LoadingScreen from "@/components/template/LoadingScreen";
+import ScrollTopButton from "@/components/molecules/ScrollTopButton";
 
 const BlogDetailPage = () => {
   const { id } = useParams();
@@ -36,6 +37,7 @@ const BlogDetailPage = () => {
         updatedAt={blog.updatedAt}
       >
         <div dangerouslySetInnerHTML={{ __html: blog.body }} />
+        <ScrollTopButton />
       </BlogTemp>
     </>
   );

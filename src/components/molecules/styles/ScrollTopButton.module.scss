@@ -1,0 +1,36 @@
+.scrollTopButton {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1000;
+}
+
+.button {
+  background-color: #1787ff;
+  color: white;
+  border: none;
+  padding: 20px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .scrollTopButton {
+    right: 10px;
+    bottom: 10px;
+  }
+  .button {
+    background-color: #1787ff9f;
+    &:hover {
+      background-color: #0057b3a4;
+    }
+  }
+}
