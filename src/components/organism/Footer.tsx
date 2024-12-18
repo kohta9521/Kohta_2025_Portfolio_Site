@@ -8,18 +8,18 @@ import styles from "./styles/Footer.module.scss";
 
 // components
 import Logo from "../atoms/Logo";
+// import FooterItemsCard from "../molecules/FooterItemsCard";
 
 // data
-import {
-  profileSubItems,
-  worksSubItems,
-  blogSubItems,
-  qaSubItems,
-} from "@/data/subItems";
+// import {
+//   profileSubItems,
+//   worksSubItems,
+//   blogSubItems,
+//   qaSubItems,
+// } from "@/data/subItems";
 
 // sns
-import { SnsItems } from "@/data/sns";
-import FooterItemsCard from "../molecules/FooterItemsCard";
+// import { SnsItems } from "@/data/sns";
 
 const Footer = () => {
   return (
