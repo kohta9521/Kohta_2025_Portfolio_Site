@@ -10,33 +10,23 @@ import styles from "./styles/Footer.module.scss";
 import Logo from "../atoms/Logo";
 
 // data
-// import {
-//   profileSubItems,
-//   worksSubItems,
-//   blogSubItems,
-//   qaSubItems,
-// } from "@/data/subItems";
+import {
+  profileSubItems,
+  worksSubItems,
+  blogSubItems,
+  qaSubItems,
+} from "@/data/subItems";
 
-// type
-export type snsArray = {
-  id: string;
-  link: string;
-  icon: React.ReactNode;
-};
+// sns
+import { SnsItems } from "@/data/sns";
+import FooterItemsCard from "../molecules/FooterItemsCard";
 
 const Footer = () => {
-  const sns: snsArray[] = [
-    {
-      id: "twitter",
-      link: "https://twitter.com/kohta",
-      icon: <i className="fab fa-twitter"></i>,
-    },
-  ];
   return (
     <div className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.top}>
-          <Logo id="footer-logo" link="/" size="medium" />
+          <Logo id="footer-logo" link="/" size="large" />
           <div className={styles.right}>
             <Link className={styles.topButton} href="/">
               <p className={styles.text}>Top</p>
@@ -45,11 +35,8 @@ const Footer = () => {
         </div>
         <div className={styles.center}>
           <div className={styles.left}>
-            {sns.map((item) => (
-              <Link key={item.id} className={styles.icon} href={item.link}>
-                {item.icon}
-              </Link>
-            ))}
+            {/* {SnsItems.map((item) => (
+            ))} */}
           </div>
           <div className={styles.right}></div>
         </div>

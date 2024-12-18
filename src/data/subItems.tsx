@@ -14,29 +14,29 @@ import { FaPencil } from "react-icons/fa6";
 import { LuCode2 } from "react-icons/lu";
 import { MdOutlineDesignServices, MdMovieEdit } from "react-icons/md";
 
-export const aboutSubItems: SubItem[] = [
-  {
-    key: "about",
-    link: "/profile/#profile",
-    reactIcon: <FaUser />,
-    jaTitle: "自己紹介",
-    enTitle: "My Profile",
-  },
-  {
-    key: "career",
-    link: "/profile/#career",
-    reactIcon: <RiProfileLine />,
-    jaTitle: "これまでとこれからのキャリア",
-    enTitle: "Career",
-  },
-  {
-    key: "hobby",
-    link: "/profile/#hobby",
-    reactIcon: <FaRocket />,
-    jaTitle: "趣味や興味",
-    enTitle: "Hobby",
-  },
-];
+// export const aboutSubItems: SubItem[] = [
+//   {
+//     key: "about",
+//     link: "/profile/#profile",
+//     reactIcon: <FaUser />,
+//     jaTitle: "自己紹介",
+//     enTitle: "My Profile",
+//   },
+//   {
+//     key: "career",
+//     link: "/profile/#career",
+//     reactIcon: <RiProfileLine />,
+//     jaTitle: "これまでとこれからのキャリア",
+//     enTitle: "Career",
+//   },
+//   {
+//     key: "hobby",
+//     link: "/profile/#hobby",
+//     reactIcon: <FaRocket />,
+//     jaTitle: "趣味や興味",
+//     enTitle: "Hobby",
+//   },
+// ];
 
 export const profileSubItems: SubItem[] = [
   {
