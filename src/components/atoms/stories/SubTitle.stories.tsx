@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import SubTitle from "../SubTitle";
 
 const meta: Meta = {
-  title: "/Components/Atoms/SubTitle",
+  title: "Components/Atoms/SubTitle",
   component: SubTitle,
   tags: ["autodocs"],
   argTypes: {

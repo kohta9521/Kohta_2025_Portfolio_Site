@@ -24,11 +24,6 @@ const Profile = () => {
       ]}
     >
       <SubTitle id="#profile" size="h1" text="Profile" />
-      <SubText
-        id="#profile"
-        text="まずはこのサイトをご覧いただきありがとうございます。"
-        size="Default"
-      />
       <SubTitle id="#career" size="h1" text="Career" />
       <SubTitle id="#skills" size="h1" text="Skills" />
       <SubTitle id="#future" size="h1" text="Future" />
