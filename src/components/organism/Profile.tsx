@@ -32,7 +32,7 @@ const Profile = () => {
           <div className={styles.left}>
             <Image
               className={styles.image}
-              src="/images/home/profile.jpg"
+              src="/images/home/profile.JPG"
               width={450}
               height={550}
               alt="profile-image"

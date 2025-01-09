@@ -40,6 +40,18 @@
   }
 }
 
+// hide logo
+.hideLogo {
+  position: absolute;
+  bottom: -130px;
+  right: -240px;
+  display: block;
+  background-color: black;
+  width: 200px;
+  height: 40px;
+  z-index: 999;
+}
+
 @media screen and (max-width: 1280px) {
   .hero {
     .titleBox {
