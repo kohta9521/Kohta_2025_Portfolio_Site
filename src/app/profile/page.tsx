@@ -6,7 +6,7 @@ import React from "react";
 // components
 import SubPageTemp from "@/components/template/SubPageTemp";
 import SubTitle from "@/components/atoms/SubTitle";
-import SubText from "@/components/atoms/SubText";
+// import SubText from "@/components/atoms/SubText";
 
 const Profile = () => {
   return (
