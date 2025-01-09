@@ -6,7 +6,7 @@ import React from "react";
 // components
 import SubPageTemp from "@/components/template/SubPageTemp";
 import SubTitle from "@/components/atoms/SubTitle";
-import SubText from "@/components/atoms/SubText";
+// import SubText from "@/components/atoms/SubText";
 
 const Profile = () => {
   return (
@@ -24,11 +24,6 @@ const Profile = () => {
       ]}
     >
       <SubTitle id="#profile" size="h1" text="Profile" />
-      <SubText
-        id="#profile"
-        text="まずはこのサイトをご覧いただきありがとうございます。"
-        size="Default"
-      />
       <SubTitle id="#career" size="h1" text="Career" />
       <SubTitle id="#skills" size="h1" text="Skills" />
       <SubTitle id="#future" size="h1" text="Future" />

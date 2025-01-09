@@ -7,6 +7,9 @@ import styles from "./styles/About.module.scss";
 // hooks
 import useAOS from "@/hooks/useAOS";
 
+// spline
+import Spline from "@splinetool/react-spline/next";
+
 // components
 import SecTitle from "../atoms/SecTitle";
 import MainButton from "../atoms/MainButton";
@@ -58,6 +61,10 @@ const About = () => {
             link="/about"
             size="medium"
           />
+        </div>
+        {/* test spline */}
+        <div className={styles.splineBox}>
+          <Spline scene="https://prod.spline.design/uafgBPD4tGPDGkhR/scene.splinecode" />
         </div>
 
         <SecTitle

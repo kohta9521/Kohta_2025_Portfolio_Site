@@ -1,21 +1,89 @@
 .text {
-  line-height: 1.6; /* 基本的な行間を設定 */
-  color: #ffffff; /* 読みやすい濃いめの文字色 */
-  margin-bottom: 1rem; /* 適切な下マージンを追加 */
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 1rem;
 }
 
+// size props
 .Default {
-  font-size: 1rem; /* 基本サイズ */
+  font-size: 1rem;
 }
 
 .Small {
-  font-size: 0.875rem; /* 小さめのフォントサイズ */
-  color: #a2a2a2; /* 少し薄めの文字色 */
+  font-size: 0.875rem;
 }
 
 .Large {
-  font-size: 1.25rem; /* 大きめのフォントサイズ */
-  font-weight: bold; /* 強調のため太字に */
+  font-size: 1.25rem;
+}
+
+// color props
+.Default {
+  color: #ffffff;
+}
+.Primary {
+  color: #ff0000;
+}
+.Secondary {
+  color: #ff6347;
+}
+.SUb {
+  color: #a2a2a2;
+}
+.Border {
+  color: #00fa9a;
+}
+.Box {
+  color: #ffd700;
+}
+
+// weight props
+.Default {
+  font-weight: 400;
+}
+.Bold {
+  font-weight: 700;
+}
+.Light {
+  font-weight: 300;
+}
+
+// type props
+.Default {
+  font-style: normal;
+}
+.Primary {
+  font-style: italic;
+}
+.Secondary {
+  text-transform: uppercase;
+}
+.Sub {
+  text-decoration: underline;
+}
+.Border {
+  border: 1px solid currentColor;
+  padding: 0.25rem;
+}
+.Box {
+  background-color: currentColor; /* 現在の文字色を背景色に使用 */
+  color: #000; /* 背景に合わせて文字色を黒に */
+  padding: 0.5rem; /* ボックスに余白を追加 */
+  border-radius: 4px; /* 角を丸める */
+}
+
+// marginBottom props
+.Default {
+  margin-bottom: 1rem;
+}
+.Small {
+  margin-bottom: 0.5rem;
+}
+.Large {
+  margin-bottom: 2rem;
+}
+.Zero {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1280px) {
