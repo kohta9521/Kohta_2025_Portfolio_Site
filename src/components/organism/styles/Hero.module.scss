@@ -22,7 +22,7 @@
   //   title
   .titleBox {
     position: absolute;
-    bottom: 13%;
+    bottom: 5%;
     left: 40px;
     text-align: left;
     color: #fff;
@@ -34,7 +34,7 @@
       line-height: 20px;
     }
     .title {
-      font-size: 45px;
+      font-size: 60px;
       font-weight: bold;
     }
   }
@@ -86,15 +86,16 @@
       color: #fff;
       .subTitle {
         display: block;
-        font-size: 20px;
+        font-size: 25px;
         font-weight: bold;
         line-height: auto;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
       }
       .title {
         display: block;
         width: 95%;
         font-size: 28px;
+        line-height: 34px;
         font-weight: bold;
       }
     }

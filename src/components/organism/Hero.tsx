@@ -11,6 +11,8 @@ import Spline from "@splinetool/react-spline/next";
 const Hero = () => {
   return (
     <div className={styles.hero}>
+      {/* mobile版でのheroのスクロール制限の対策 */}
+      {/* <div className={styles.heroover}></div> */}
       <Spline scene="https://prod.spline.design/NhFAEoemg3q4zeRY/scene.splinecode" />
       <div className={styles.titleBox}>
         <p className={styles.subTitle}>kohta kochi</p>

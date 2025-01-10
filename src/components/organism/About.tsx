@@ -8,7 +8,7 @@ import styles from "./styles/About.module.scss";
 import useAOS from "@/hooks/useAOS";
 
 // spline
-import Spline from "@splinetool/react-spline/next";
+// import Spline from "@splinetool/react-spline/next";
 
 // components
 import SecTitle from "../atoms/SecTitle";
@@ -63,9 +63,9 @@ const About = () => {
           />
         </div>
         {/* test spline */}
-        <div className={styles.splineBox}>
+        {/* <div className={styles.splineBox}>
           <Spline scene="https://prod.spline.design/uafgBPD4tGPDGkhR/scene.splinecode" />
-        </div>
+        </div> */}
 
         <SecTitle
           id="about-title"

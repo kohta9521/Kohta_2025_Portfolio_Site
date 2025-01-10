@@ -8,6 +8,9 @@ import Image from "next/image";
 // scss
 import styles from "./styles/BlogCard.module.scss";
 
+// utils
+import { formatDate } from "@/utils/formatDate";
+
 // props
 export type BlogCardProps = {
   id: string;
@@ -28,7 +31,7 @@ const BlogCard = ({ id, title, link, img, date }: BlogCardProps) => {
         alt="blog-top-image"
       />
       <h2 className={styles.title}>{title}</h2>
-      <p className={styles.date}>{date}</p>
+      <p className={styles.date}>{formatDate(date)}</p>
     </Link>
   );
 };

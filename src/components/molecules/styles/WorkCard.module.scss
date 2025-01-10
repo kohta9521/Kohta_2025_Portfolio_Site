@@ -42,13 +42,16 @@
   .workCard {
     width: 300px;
     padding: 15px;
+    max-height: fit-content;
     .image {
       width: 270px;
       height: auto;
     }
     .clientName {
+      font-size: 13px;
     }
     .title {
+      font-size: 18px;
     }
     .genre {
     }
