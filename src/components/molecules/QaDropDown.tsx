@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 
-// next
 
 // react icons
 import { FaQuestion } from "react-icons/fa";
