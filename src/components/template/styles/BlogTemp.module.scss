@@ -112,9 +112,14 @@
       }
 
       ul {
-        li {
-          font-size: 12px;
-        }
+        padding-left: 20px;
+      }
+      li {
+        font-size: 12px;
+        padding-left: 12px;
+      }
+      li::marker {
+        margin-left: 10px;
       }
     }
   }
