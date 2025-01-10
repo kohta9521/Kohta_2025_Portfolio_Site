@@ -71,3 +71,52 @@
     }
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .page {
+    .hero {
+      padding-top: 100px;
+      .client {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      .title {
+        font-size: 35px;
+      }
+      .desc {
+        font-size: 14px;
+      }
+      .link {
+        margin-bottom: 50px;
+        .linkText {
+        }
+        .linkIcon {
+        }
+      }
+      .image {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .container {
+      width: 85%;
+      h1 {
+        margin-bottom: 10px;
+      }
+      h2 {
+        margin: 40px 0px 20px 0px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 27px;
+      }
+      ul {
+        li {
+          font-size: 14px;
+          line-height: 27px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
