@@ -1,0 +1,26 @@
+.service {
+  width: 100%;
+  height: auto;
+  padding: 0px 0px 100px 0px;
+  .container {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    .cardBox {
+      width: 100%;
+      height: auto;
+      margin-bottom: 50px;
+      display: flex;
+      align-items: top;
+      justify-content: space-around;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .service {
+    .container {
+      width: 90%;
+    }
+  }
+}
