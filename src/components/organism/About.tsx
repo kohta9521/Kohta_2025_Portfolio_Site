@@ -13,7 +13,6 @@ import useAOS from "@/hooks/useAOS";
 // components
 import SecTitle from "../atoms/SecTitle";
 import MainButton from "../atoms/MainButton";
-import AboutCard from "../molecules/AboutCard";
 
 const About = () => {
   useAOS();
@@ -66,55 +65,6 @@ const About = () => {
         {/* <div className={styles.splineBox}>
           <Spline scene="https://prod.spline.design/uafgBPD4tGPDGkhR/scene.splinecode" />
         </div> */}
-
-        <SecTitle
-          id="about-title"
-          jaTitleSize="default"
-          jaTitle="私が提供しているサービス"
-          enTitle="Services I offer"
-        />
-        <AboutCard
-          id="web-card"
-          title="Web制作"
-          desc="課題解決につながるクリエイティブをご提案します。"
-          linkText="詳しくみる"
-          link="/service/web"
-          imgArray={[
-            "/images/home/blog.png",
-            "/images/home/freers.png",
-            "/images/home/hokulea.png",
-            "/images/home/kokogohan.png",
-            "/images/home/ufes.png",
-          ]}
-        />
-        <AboutCard
-          id="software-card"
-          title="ソフトウェア開発"
-          desc="課題解決につながるクリエイティブをご提案します。"
-          linkText="詳しくみる"
-          link="/service/web"
-          imgArray={[
-            "/images/home/blog.png",
-            "/images/home/freers.png",
-            "/images/home/hokulea.png",
-            "/images/home/kokogohan.png",
-            "/images/home/ufes.png",
-          ]}
-        />
-        <AboutCard
-          id="design-card"
-          title="デザイン制作"
-          desc="課題解決につながるクリエイティブをご提案します。"
-          linkText="詳しくみる"
-          link="/service/web"
-          imgArray={[
-            "/images/home/blog.png",
-            "/images/home/freers.png",
-            "/images/home/hokulea.png",
-            "/images/home/kokogohan.png",
-            "/images/home/ufes.png",
-          ]}
-        />
       </div>
     </div>
   );
