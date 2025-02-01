@@ -1,118 +1,57 @@
-"use client";
 import React from "react";
 
 // next
 import Image from "next/image";
 
-// hooks
-import useAOS from "@/hooks/useAOS";
-
-// scss
-import styles from "./styles/Profile.module.scss";
-
-// data
-// import { Backend, frontend, Others } from "@/data/langs";
-
 // components
 import SecTitle from "../atoms/SecTitle";
-// import SkillCard from "../molecules/SkillCard";
+import ViewMoreButton from "../atoms/ViewMoreButton";
 
 const Profile = () => {
-  useAOS();
   return (
-    <div className={styles.profile}>
-      <div className={styles.container}>
-        <SecTitle
-          id="profile-title"
-          jaTitleSize="default"
-          jaTitle="kohtaとは"
-          enTitle="who is kohta"
-        />
-        <div className={styles.top} data-aos="fade-up">
-          <div className={styles.left}>
+    <div className="w-screen h-auto py-20 sm:py-28">
+      <div className="w-10/12 max-w-11/12 mx-auto sm:w-9/12">
+        <SecTitle id="home-profile" jaText="kohtaについて" enText="PROFILE" />
+        <div className="w-full h-auto pt-16 sm:flex sm:justify-between sm:items-center">
+          <div className="sm:w-2/5">
             <Image
-              className={styles.image}
-              src="/images/home/profile.jpg"
-              width={450}
-              height={550}
+              className="w-full h-auto mx-auto mb-6"
+              src="/images/profile.jpg"
+              width={300}
+              height={300}
               alt="profile-image"
             />
           </div>
-          <div className={styles.right}>
-            <p className={styles.enName}>kochi kohta</p>
-            <h2 className={styles.name}>河内 光太</h2>
-            <ul>
-              <li>学習院大学法学部法学科学部3年生 (21)</li>
-              <li>株式会社Enter CEO</li>
-              <li>株式会社AMIJAM CTO</li>
-              <li>株式会社メディアエイド 新規事業PT本部</li>
-              <li>株式会社MugendAI フロントエンドエンジニア</li>
+
+          <div className="sm:w-1/2">
+            <p className="mb-1 text-red-600 sm:text-xl">Kochi Kohta</p>
+            <h1 className="mb-7 text-3xl font-semibold sm:text-5xl sm:mb-10">
+              河内 光太
+            </h1>
+            <ul className="mb-7 text-sm font-medium leading-6 sm:leading-7 sm:text-base">
+              <li>・学習院大学法学部法学科学部3年生(21)</li>
+              <li>・株式会社Enter CEO</li>
+              <li>・株式会社AMIJAM CTO</li>
+              <li>・株式会社メディアエイド 新規事業PT本部 PDM</li>
+              <li>・株式会社MugendAI フロントエンドエンジニア</li>
             </ul>
-            <p className={styles.desc}>
+            <p className="mb-20 text-sm font-medium text-white leading-6 sm:text-base sm:leading-loose">
               大学1年生でプログラミングと出会い没頭、勉強を始めてから数年間ほぼ毎日コーディングをしている。
               主にフロントエンドを中心にWeb開発を行っており、React/Next.jsを使った開発が得意。最近はバックエンドも勉強中。
               <br />
-              <br />
               現在は会社にエンジニアとして所属しながら、フリーランス、業務委託という形で開発を行っている。
-              <br />
               その他にも、イベント運営・イベントのDX化などを自身で行っておりコーディングだけではないクライアントとのやり取りも得意。
-              <br />
               <br />
               大学学内で友人と共同開発でサービスをリリースしたり、学内でエンジニアになりたい学生の支援なども行っている。
               音楽が好きということもあり趣味でDJなども行っている。
             </p>
+            <ViewMoreButton
+              id="profile-view-more"
+              link="/profile"
+              position="center"
+            />
           </div>
         </div>
-        {/* <div className={styles.bottom} data-aos="fade-up">
-          <div className={styles.left}>
-            <p className={styles.title}>Frontend</p>
-            <div className={styles.contents}>
-              {frontend.map((skill) => (
-                <SkillCard
-                  id={skill.id}
-                  name={skill.name}
-                  version={skill.version}
-                  reactIcon={skill.reactIcon}
-                  years={skill.years}
-                  skill={skill.skill}
-                  desc={skill.desc}
-                />
-              ))}
-            </div>
-          </div>
-          <div className={styles.center}>
-            <p className={styles.title}>Backend</p>
-            <div className={styles.contents}>
-              {Backend.map((skill) => (
-                <SkillCard
-                  id={skill.id}
-                  name={skill.name}
-                  version={skill.version}
-                  reactIcon={skill.reactIcon}
-                  years={skill.years}
-                  skill={skill.skill}
-                  desc={skill.desc}
-                />
-              ))}
-            </div>
-          </div>
-          <div className={styles.right}>
-            <p className={styles.title}>Others</p>
-            <div className={styles.contents}>
-              {Others.map((skill) => (
-                <SkillCard
-                  id={skill.id}
-                  name={skill.name}
-                  version={skill.version}
-                  reactIcon={skill.reactIcon}
-                  years={skill.years}
-                  skill={skill.skill}
-                  desc={skill.desc}
-                />
-              ))}
-            </div>
-          </div>
-        </div> */}
       </div>
     </div>
   );

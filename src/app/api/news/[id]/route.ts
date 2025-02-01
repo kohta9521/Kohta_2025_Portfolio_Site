@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { newsclient } from "@/libs/newsclient";
+import { client } from "@/libs/client";
 
 // `GET` メソッドの修正
 export async function GET(
@@ -13,7 +13,7 @@ export async function GET(
   }
 
   try {
-    const data = await newsclient.get({
+    const data = await client.get({
       endpoint: `news/${id}`,
     });
     return NextResponse.json(data);
