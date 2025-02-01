@@ -1,97 +1,144 @@
-"use client";
-import React, { useState, useEffect } from "react";
-
-// scss
-import styles from "./styles/Blog.module.scss";
-
-// hooks
-import useAOS from "@/hooks/useAOS";
-import useGetAllBlog from "@/hooks/useGetAllBlogs";
+import React from "react";
 
 // components
 import SecTitle from "../atoms/SecTitle";
-import MainButton from "../atoms/MainButton";
+import ViewMoreButton from "../atoms/ViewMoreButton";
 import BlogCard from "../molecules/BlogCard";
 
 const Blog = () => {
-  useAOS();
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [cardWidth, setCardWidth] = useState(400); // 初期値600px
-
-  // カードデータを取得
-  const blogs = useGetAllBlog();
-
-  // ウィンドウ幅に応じたカード幅を設定
-  useEffect(() => {
-    const updateCardWidth = () => {
-      if (window.innerWidth <= 768) {
-        setCardWidth(250); // スマホ幅
-      } else {
-        setCardWidth(400); // デスクトップ幅
-      }
-    };
-
-    updateCardWidth();
-    window.addEventListener("resize", updateCardWidth);
-
-    return () => {
-      window.removeEventListener("resize", updateCardWidth);
-    };
-  }, []);
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? blogs.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev >= blogs.length - 1 ? 0 : prev + 1));
-  };
   return (
-    <div className={styles.blog}>
-      <div className={styles.container}>
-        <SecTitle
-          id="blog-title"
-          jaTitleSize="default"
-          jaTitle="ブログ記事"
-          enTitle="Blogs"
-        />
-        <div className={styles.slideBox}>
-          <div
-            data-aos="fade-up"
-            className={styles.slider}
-            style={{
-              transform: `translateX(-${currentIndex * (cardWidth + 30)}px)`, // カード幅 + margin-right: 30px
-            }}
-          >
-            {blogs.map((blog) => (
-              <div key={blog.id} className={styles.slide}>
-                <BlogCard
-                  id={blog.id}
-                  title={blog.title}
-                  link={`/blogs/${blog.id}`}
-                  img={blog.topImage?.url || "/images/home/blog.png"}
-                  date={blog.createdAt}
-                />
-              </div>
-            ))}
+    <div className="w-screen h-auto py-10 sm:py-28">
+      <div className="w-10/12 mx-w-11/12 mx-auto sm:w-9/12">
+        <SecTitle id="blog" jaText="ブログ" enText="Blog" />
+        {/* Main Tech */}
+        <div className="py-12">
+          <p className="block bg-red-600 mb-2 w-32 text-center text-white py-1 px-2 rounded-full font-semibold text-xs">
+            テクノロジー関連
+          </p>
+          <h3 className="text-3xl font-bold mb-3">- Technology</h3>
+          <p className="w-full text-sm text-red-600 font-semibold mb-10">
+            日々のエンジニアリング関連の勉強、そして新技術いついてや書籍の感想などITに関する幅広い情報を発信しています。
+          </p>
+          <div className="sm:flex sm:justify-between">
+            <div className="sm:w-2/5">
+              <p className="mb-2 text-lg font-semibold sm:block">Pickup!</p>
+              <BlogCard
+                id="blog-card-1"
+                link="/"
+                type="Card"
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              />
+            </div>
+
+            {/* List */}
+            <div className="w-full h-auto my-12 sm:w-3/6">
+              <BlogCard
+                id="blog-card-1"
+                link="/"
+                type="List"
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              />
+              <BlogCard
+                id="blog-card-1"
+                link="/"
+                type="List"
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              />
+              <BlogCard
+                id="blog-card-1"
+                link="/"
+                type="List"
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              />
+              <BlogCard
+                id="blog-card-1"
+                link="/"
+                type="List"
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              />
+              <div className="w-full h-10"></div>
+              <ViewMoreButton
+                id="blog-view-more"
+                link="/blog"
+                position="center"
+              />
+            </div>
           </div>
         </div>
-        <div className={styles.bottom} data-aos="fade-up">
-          <div className={styles.left}>
-            <button className={styles.button} onClick={handlePrev}>
-              ←
-            </button>
-            <button className={styles.button} onClick={handleNext}>
-              →
-            </button>
-          </div>
-          <div className={styles.right}>
-            <MainButton
-              id="blog-more"
-              text="もっと見る"
-              link="/blogs"
-              size="medium"
-            />
+        {/* Stock */}
+        <div className="py-12">
+          <p className="block bg-red-600 mb-2 w-32 text-center text-white py-1 px-2 rounded-full font-semibold text-xs">
+            株式・金融関連
+          </p>
+          <h3 className="text-3xl font-bold mb-3">- Stock</h3>
+          <p className="w-full text-sm text-red-600 font-semibold mb-10">
+            私が日々行なっているトレードのポートフォリオや株式投資全般の勉強内容、税金や金融に関する内容をテックとは分けてブログにしています。Stock
+            Blogは別サイトに遷移するためご注意ください。
+          </p>
+          <div className="sm:flex sm:justify-between">
+            <div className="sm:w-2/5">
+              <p className="mb-2 text-lg font-semibold sm:block">Pickup!</p>
+              <BlogCard
+                id="blog-card-1"
+                link="/"
+                type="Card"
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              />
+            </div>
+
+            {/* List */}
+            <div className="w-full h-auto my-12 sm:w-3/6">
+              <BlogCard
+                id="blog-card-1"
+                link="/"
+                type="List"
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              />
+              <BlogCard
+                id="blog-card-1"
+                link="/"
+                type="List"
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              />
+              <BlogCard
+                id="blog-card-1"
+                link="/"
+                type="List"
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              />
+              <BlogCard
+                id="blog-card-1"
+                link="/"
+                type="List"
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              />
+              <div className="w-full h-10"></div>
+              <ViewMoreButton
+                id="blog-view-more"
+                link="/blog"
+                position="center"
+              />
+            </div>
           </div>
         </div>
       </div>

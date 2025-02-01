@@ -1,24 +1,21 @@
-// next
 import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "../styles/globals.css";
 
-// scss
-import "../styles/globals.scss";
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
-// next
-import { Analytics } from "@vercel/analytics/react";
-// import { SpeedInsights } from "@vercel/speed-insights/next";
-
-// const ibmPlexMono = IBM_Plex_Mono({
-//   subsets: ["latin"],
-//   weight: ["400", "700"],
-//   variable: "--font-ibm-plex-mono",
-// });
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "Kohta 2025 Portfolio Site",
-  description: "kohta kochiの2025年版ポートフォリオサイト",
-  keywords:
-    "大学生, えんじにあ, 2025, エンジニア, ポートフォリオ, プログラミング, プログラム, IT業界, 開発者, フリーランス, キャリア, 技術スタック, プロジェクト",
+  title: "Kohtaのエンジニアポートフォリオ | Kohta's Engineer Portfolio",
+  description:
+    "Kohtaのエンジニアポートフォリオです。エンジニアとしてスキルや仕事内容を紹介しています。またエンジニアとしてブログなどもご覧いただけます。是非楽しんでいってください。",
 };
 
 export default function RootLayout({
@@ -28,8 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body>{children}</body>
-      <Analytics />
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
