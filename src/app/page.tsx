@@ -10,11 +10,13 @@ import Contact from "@/components/organism/Contact";
 import Footer from "@/components/organism/Footer";
 import Blog from "@/components/organism/Blog";
 import Case from "@/components/organism/Case";
+// import ContactBox from "@/components/atoms/ContactBox";
 
 export default function Home() {
   return (
     <div className="w-screen">
       <Header />
+      {/* <ContactBox /> */}
       <MobileHeader />
       <Hero />
       <About />
