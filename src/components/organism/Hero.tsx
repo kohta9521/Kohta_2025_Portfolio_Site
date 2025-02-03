@@ -9,7 +9,7 @@ const Hero = () => {
     <div className="relative w-screen h-screen flex items-center justify-center overflow-hidden">
       {/* 📌 Hero 背景画像（中央配置 & フルサイズ） */}
       <Image
-        className="absolute w-11/12 h-full mb-20 object-contain sm:w-1/3 sm:h-auto -z-10"
+        className="absolute w-11/12 h-full mb-24 object-contain sm:w-1/3 sm:h-auto -z-10 animate-floating"
         src="/images/phone-2.png"
         width={1513}
         height={2704}
