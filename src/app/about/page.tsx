@@ -64,6 +64,7 @@ const About = () => {
         <br />
         それを踏まえて以下の技術を使用してこのサイトを制作しました。
       </p>
+      {/* TechBox /src/components/subpage */}
       <ul>
         <li></li>
       </ul>
