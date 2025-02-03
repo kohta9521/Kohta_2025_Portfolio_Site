@@ -11,7 +11,7 @@ import ViewMoreButton from "../atoms/ViewMoreButton";
 const About = () => {
   useAOS();
   return (
-    <div className="w-screen h-auto pt-52 mb-28 sm:mb-40">
+    <div className="w-screen h-auto pt-40 mb-28 sm:mb-40">
       <div className="w-10/12 mx-auto sm:w-9/12">
         <SecTitle id="home-about" jaText="このサイトについて" enText="ABOUT" />
         <div className="pt-14">
@@ -24,7 +24,7 @@ const About = () => {
             クリエイターとしてのプライドをかけて
           </h3>
           <p
-            className="block mb-20 text-sm font-semibold leading-7 sm:text-lg sm:leading-relaxed"
+            className="block mb-12 text-sm font-semibold leading-7 sm:text-lg sm:leading-relaxed"
             data-aos="fade-up"
           >
             初めまして、kohta kochiと申します!
@@ -34,7 +34,7 @@ const About = () => {
             大学生をしながら、Web制作やソフトウェア開発、デザイン制作などの活動を行っています。
             <br />
             <br />
-            <span className="text-red-500">
+            <span className="text-red-600">
               ITで人の役に立つのに年齢制限はない
             </span>
             <br />

@@ -5,7 +5,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="relative w-screen h-screen flex items-center justify-center">
+    <div className="relative w-screen h-screen  flex items-center justify-center">
       {/* Spline Wrapper */}
       {/* <div className="w-full h-full flex justify-center items-center overflow-hidden">
         <Spline
@@ -15,8 +15,8 @@ const Hero = () => {
       </div> */}
 
       {/* テキスト */}
-      <div className="absolute bottom-10 left-3 sm:bottom-10 sm:left-14 text-white">
-        <p className="text-xl mb-1 font-semibold sm:text-3xl sm:leading-10">
+      <div className="absolute bottom-24 left-3 sm:bottom-32 sm:left-14 text-white">
+        <p className="text-xl mb-0 text-red-600 font-semibold sm:text-3xl sm:leading-10">
           Kohta Kochi
         </p>
         <h1 className="text-3xl font-semibold sm:text-6xl sm:leading-tight">

@@ -43,7 +43,7 @@ const BlogCard = ({ id, link, type, image, date, title }: BlogCardProps) => {
             alt={title}
             width={550}
             height={400}
-            className="w-11/12 mx-auto object-cover"
+            className="w-full mx-auto object-cover"
           />
           {/* 📝 テキスト */}
           <div className="p-5">

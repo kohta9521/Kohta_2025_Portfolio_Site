@@ -12,11 +12,11 @@ const Blog = () => {
         <SecTitle id="blog" jaText="ブログ" enText="Blog" />
         {/* Main Tech */}
         <div className="py-12">
-          <p className="block bg-red-600 mb-2 w-32 text-center text-white py-1 px-2 rounded-full font-semibold text-xs">
+          <p className="block bg-red-600 mb-3 w-32 text-center text-white py-1 px-2 rounded-full font-semibold text-xs">
             テクノロジー関連
           </p>
           <h3 className="text-3xl font-bold mb-3">- Technology</h3>
-          <p className="w-full text-sm text-red-600 font-semibold mb-10">
+          <p className="w-full text-xs text-red-600 font-semibold mb-10 sm:text-base">
             日々のエンジニアリング関連の勉強、そして新技術いついてや書籍の感想などITに関する幅広い情報を発信しています。
           </p>
           <div className="sm:flex sm:justify-between">
@@ -77,11 +77,11 @@ const Blog = () => {
         </div>
         {/* Stock */}
         <div className="py-12">
-          <p className="block bg-red-600 mb-2 w-32 text-center text-white py-1 px-2 rounded-full font-semibold text-xs">
+          <p className="block bg-red-600 mb-3 w-32 text-center text-white py-1 px-2 rounded-full font-semibold text-xs">
             株式・金融関連
           </p>
           <h3 className="text-3xl font-bold mb-3">- Stock</h3>
-          <p className="w-full text-sm text-red-600 font-semibold mb-10">
+          <p className="w-full text-xs text-red-600 font-semibold mb-10 sm:text-base">
             私が日々行なっているトレードのポートフォリオや株式投資全般の勉強内容、税金や金融に関する内容をテックとは分けてブログにしています。Stock
             Blogは別サイトに遷移するためご注意ください。
           </p>
