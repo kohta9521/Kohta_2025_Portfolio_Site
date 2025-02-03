@@ -19,7 +19,15 @@ const Case = () => {
           <CaseCard
             id="case-card-1"
             link="/"
-            image="/images/sample.png"
+            image="/images/ufes.png"
+            tag="イベントLP"
+            category="Webサイト制作"
+            title="UFES2024のイベントLPを制作しました"
+          />
+          <CaseCard
+            id="case-card-1"
+            link="/"
+            image="/images/hokulea.png"
             tag="シンプル"
             category="Webサイト製作"
             title="MicroCMSで簡単なブログをNext.js + TailwindCSSで作成"
@@ -27,39 +35,7 @@ const Case = () => {
           <CaseCard
             id="case-card-1"
             link="/"
-            image="/images/sample.png"
-            tag="シンプル"
-            category="Webサイト製作"
-            title="MicroCMSで簡単なブログをNext.js + TailwindCSSで作成"
-          />
-          <CaseCard
-            id="case-card-1"
-            link="/"
-            image="/images/sample.png"
-            tag="シンプル"
-            category="Webサイト製作"
-            title="MicroCMSで簡単なブログをNext.js + TailwindCSSで作成"
-          />
-          <CaseCard
-            id="case-card-1"
-            link="/"
-            image="/images/sample.png"
-            tag="シンプル"
-            category="Webサイト製作"
-            title="MicroCMSで簡単なブログをNext.js + TailwindCSSで作成"
-          />
-          <CaseCard
-            id="case-card-1"
-            link="/"
-            image="/images/sample.png"
-            tag="シンプル"
-            category="Webサイト製作"
-            title="MicroCMSで簡単なブログをNext.js + TailwindCSSで作成"
-          />
-          <CaseCard
-            id="case-card-1"
-            link="/"
-            image="/images/sample.png"
+            image="/images/freers.png"
             tag="シンプル"
             category="Webサイト製作"
             title="MicroCMSで簡単なブログをNext.js + TailwindCSSで作成"

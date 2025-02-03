@@ -27,7 +27,7 @@ const CaseCard = ({ id, link, image, tag, title, category }: CaseCardProps) => {
     <Link
       key={id}
       href={link}
-      className="w-full sm:w-1/2 lg:w-full group block overflow-hidden rounded-lg transition-all duration-500"
+      className="w-full sm:w-1/2 lg:w-full  group block overflow-hidden rounded-lg transition-all duration-500  hover:border-red-600 hover:shadow-2xl"
       data-aos="fade-up"
     >
       {/* 🖼️ 画像 */}
