@@ -31,3 +31,26 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 }
+@layer utilities {
+  @keyframes floating {
+    0% {
+      transform: translateY(0) rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+      transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);
+    }
+    50% {
+      transform: translateY(0) rotateX(0deg) rotateY(0deg);
+    }
+    75% {
+      transform: translateY(-10px) rotateX(-5deg) rotateY(5deg);
+    }
+    100% {
+      transform: translateY(0) rotateX(0deg) rotateY(0deg);
+    }
+  }
+
+  .animate-floating {
+    animation: floating 5s infinite ease-in-out;
+  }
+}
