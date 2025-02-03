@@ -54,3 +54,84 @@ body {
     animation: floating 5s infinite ease-in-out;
   }
 }
+@layer utilities {
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+}
+/* Contact/Thanksでの紙吹雪 */
+@layer utilities {
+  @keyframes confetti-fall {
+    0% {
+      transform: translateY(-100vh) rotateZ(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotateZ(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* 増やす紙吹雪の設定 */
+  .confetti {
+    position: absolute;
+    top: -10px;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    animation: confetti-fall 3s linear infinite;
+  }
+
+  /* 紙吹雪のランダムな位置・色 */
+  .confetti-1 {
+    left: 10%;
+    background-color: #ffcc00;
+    animation-duration: 4s;
+  }
+  .confetti-2 {
+    left: 20%;
+    background-color: #ff3366;
+    animation-duration: 3.5s;
+  }
+  .confetti-3 {
+    left: 30%;
+    background-color: #66ff99;
+    animation-duration: 3.8s;
+  }
+  .confetti-4 {
+    left: 40%;
+    background-color: #3399ff;
+    animation-duration: 4.2s;
+  }
+  .confetti-5 {
+    left: 50%;
+    background-color: #ff66cc;
+    animation-duration: 4.5s;
+  }
+  .confetti-6 {
+    left: 60%;
+    background-color: #ffcc00;
+    animation-duration: 3s;
+  }
+  .confetti-7 {
+    left: 70%;
+    background-color: #ff3366;
+    animation-duration: 4s;
+  }
+  .confetti-8 {
+    left: 80%;
+    background-color: #66ff99;
+    animation-duration: 3.5s;
+  }
+  .confetti-9 {
+    left: 90%;
+    background-color: #3399ff;
+    animation-duration: 4.2s;
+  }
+  .confetti-10 {
+    left: 95%;
+    background-color: #ff66cc;
+    animation-duration: 4s;
+  }
+}
