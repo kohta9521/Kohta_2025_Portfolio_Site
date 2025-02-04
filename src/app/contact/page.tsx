@@ -25,7 +25,7 @@ const Contact = () => {
       <form
         method="post"
         action="https://kohta-engineer-portfolio.form.newt.so/v1/RqLXd0DCc"
-        className="max-w-lg w-full mx-auto bg-gray-900 p-6 rounded-lg shadow-md"
+        className=" w-full mx-auto rounded-lg shadow-md"
       >
         {/* 📝 名前 */}
         <div className="mb-6">

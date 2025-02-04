@@ -61,9 +61,7 @@ const Contact = () => {
             href="/contact"
             className="flex w-full justify-center items-center gap-3 mb-10 transition-all duration-300 hover:scale-105 hover:text-red-500"
           >
-            <p className="text-xs font-semibold">
-              お問い合わせフォームからお問い合わせ
-            </p>
+            <p className="text-xs font-semibold">ダウンロードはこちらから</p>
             <IoArrowForwardCircleSharp
               size={24}
               className="transition-transform duration-300 group-hover:translate-x-1"

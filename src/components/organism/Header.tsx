@@ -19,9 +19,10 @@ const Header = () => {
         <div className="hidden sm:w-auto sm:flex justify-between items-center">
           <ListItem id="top-link-1" link="/about" text="About" />
           <ListItem id="top-link-2" link="/profile" text="Profile" />
-          <ListItem id="top-link-3" link="/works" text="Works" />
-          <ListItem id="top-link-4" link="/blog" text="Blog" />
-          <ListItem id="top-link-5" link="/news" text="News" />
+          <ListItem id="top-link-3" link="/service" text="Service" />
+          <ListItem id="top-link-4" link="/works" text="Works" />
+          <ListItem id="top-link-5" link="/blog" text="Blog" />
+          <ListItem id="top-link-6" link="/news" text="News" />
         </div>
         <div className="hidden  sm:flex sm:justify-end sm:items-center">
           <ListBlockItem

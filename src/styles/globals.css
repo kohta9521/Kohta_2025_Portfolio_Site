@@ -21,7 +21,7 @@ body {
 /* subpageのmain text */
 @layer components {
   .subpage-main-text {
-    @apply mb-10 text-base leading-relaxed sm:leading-loose text-white;
+    @apply mb-10 text-base leading-loose sm:leading-loose text-white;
   }
 }
 
@@ -73,7 +73,7 @@ body {
     }
   }
 
-  /* 増やす紙吹雪の設定 */
+  /* 紙吹雪の設定 */
   .confetti {
     position: absolute;
     top: -10px;
@@ -81,51 +81,52 @@ body {
     height: 10px;
     opacity: 0;
     animation: confetti-fall 3s linear infinite;
+    pointer-events: none; /* 🎯 クリックをブロックしない */
   }
 
   /* 紙吹雪のランダムな位置・色 */
   .confetti-1 {
-    left: 10%;
+    left: 5%;
     background-color: #ffcc00;
     animation-duration: 4s;
   }
   .confetti-2 {
-    left: 20%;
+    left: 15%;
     background-color: #ff3366;
     animation-duration: 3.5s;
   }
   .confetti-3 {
-    left: 30%;
+    left: 25%;
     background-color: #66ff99;
     animation-duration: 3.8s;
   }
   .confetti-4 {
-    left: 40%;
+    left: 35%;
     background-color: #3399ff;
     animation-duration: 4.2s;
   }
   .confetti-5 {
-    left: 50%;
+    left: 45%;
     background-color: #ff66cc;
     animation-duration: 4.5s;
   }
   .confetti-6 {
-    left: 60%;
+    left: 55%;
     background-color: #ffcc00;
     animation-duration: 3s;
   }
   .confetti-7 {
-    left: 70%;
+    left: 65%;
     background-color: #ff3366;
     animation-duration: 4s;
   }
   .confetti-8 {
-    left: 80%;
+    left: 75%;
     background-color: #66ff99;
     animation-duration: 3.5s;
   }
   .confetti-9 {
-    left: 90%;
+    left: 85%;
     background-color: #3399ff;
     animation-duration: 4.2s;
   }
