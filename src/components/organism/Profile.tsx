@@ -10,7 +10,7 @@ import ViewMoreButton from "../atoms/ViewMoreButton";
 const Profile = () => {
   return (
     <div className="w-screen h-auto py-20 sm:py-28">
-      <div className="w-10/12 max-w-11/12 mx-auto sm:w-9/12">
+      <div className="w-10/12 max-w-10/12 mx-auto sm:w-9/12">
         <SecTitle id="home-profile" jaText="kohtaについて" enText="PROFILE" />
         <div className="w-full h-auto pt-16 sm:flex sm:justify-between sm:items-center">
           <div className="sm:w-2/5">

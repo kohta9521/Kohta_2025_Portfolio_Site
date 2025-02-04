@@ -19,13 +19,13 @@ import { IoHomeOutline } from "react-icons/io5";
 const HamburgerMenu = ({ isOpen, closeMenu }: HamburgerMenuProps) => {
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-screen bg-red-500 text-white transition-opacity duration-300 z-50 ${
+      className={`fixed top-0 left-0 w-full h-screen bg-black text-white transition-opacity duration-300 z-50 ${
         isOpen ? "opacity-100 visible" : "opacity-0 invisible"
       }`}
     >
       <button
         onClick={closeMenu}
-        className="absolute top-4 right-4 text-2xl font-bold text-white"
+        className="absolute top-6 right-7 text-2xl font-bold text-white"
       >
         ✕
       </button>

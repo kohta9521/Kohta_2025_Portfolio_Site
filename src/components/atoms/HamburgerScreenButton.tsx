@@ -21,7 +21,7 @@ const HamburgerScreenButton = ({
     <Link
       key={id}
       href={link}
-      className="w-screen h-auto py-3 flex items-center"
+      className="w-screen h-auto py-3 flex items-center text-center"
     >
       {icon}
       <p className="ml-3 text-xl">{text}</p>

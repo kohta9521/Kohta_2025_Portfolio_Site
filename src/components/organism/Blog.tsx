@@ -8,7 +8,7 @@ import BlogCard from "../molecules/BlogCard";
 const Blog = () => {
   return (
     <div className="w-screen h-auto py-10 sm:py-28">
-      <div className="w-10/12 mx-w-11/12 mx-auto sm:w-9/12">
+      <div className="w-11/12 mx-w-11/12 mx-auto sm:w-9/12">
         <SecTitle id="blog" jaText="ブログ" enText="Blog" />
         {/* Main Tech */}
         <div className="py-12">

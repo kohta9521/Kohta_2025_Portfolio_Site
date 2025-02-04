@@ -34,7 +34,7 @@ const Logo = ({
     >
       <p
         className={clsx("", {
-          "text-white transition-all duration-200 hover:text-red-500":
+          "text-white transition-all duration-200 hover:text-red-600":
             color === "white",
           "text-black": color === "black",
           "text-red-600": color === "red",

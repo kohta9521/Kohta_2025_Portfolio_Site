@@ -8,7 +8,7 @@ import ViewMoreButton from "../atoms/ViewMoreButton";
 const Case = () => {
   return (
     <div className="w-screen h-auto py-20">
-      <div className="w-10/12 max-w-11/12 mx-auto">
+      <div className="w-10/12 max-w-10/12 mx-auto">
         <SecTitle id="home-case" jaText="過去の実績" enText="CASE" />
         <p className="w-full text-sm text-red-600 font-semibold my-4">
           こちらでは私のこれまでに製作した数々のお仕事をご覧いただくことができます。
@@ -30,7 +30,7 @@ const Case = () => {
             image="/images/hokulea.png"
             tag="シンプル"
             category="Webサイト製作"
-            title="MicroCMSで簡単なブログをNext.js + TailwindCSSで作成"
+            title="株式会社HOKULEAのサイトを制作させていただきました。"
           />
           <CaseCard
             id="case-card-1"
@@ -38,7 +38,7 @@ const Case = () => {
             image="/images/freers.png"
             tag="シンプル"
             category="Webサイト製作"
-            title="MicroCMSで簡単なブログをNext.js + TailwindCSSで作成"
+            title="株式会社Freersの会社サイトを制作させていただきました。"
           />
         </div>
         <div className="w-full h-auto pt-20">
