@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 // types
 import { Blog } from "@/types/blog";
 
-function useGetAllBlogs() {
+export function useGetAllBlogs() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
 
   useEffect(() => {
