@@ -1,17 +1,17 @@
 "use client";
 import { useState, useEffect } from "react";
 
-// types
+// type
 import { Blog } from "@/types/blog";
 
-export function useGetAllBlogs() {
+function useGetAllBlogs() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
 
   useEffect(() => {
     fetch("/api/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data))
-      .catch((error) => console.error("Error fetching blogs:", error));
+      .catch((error) => console.error("Error fetching blogs: ", error));
   }, []);
 
   return blogs;

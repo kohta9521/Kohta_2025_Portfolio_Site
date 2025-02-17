@@ -21,7 +21,7 @@ const Header = () => {
           <ListItem id="top-link-2" link="/profile" text="Profile" />
           <ListItem id="top-link-3" link="/service" text="Service" />
           <ListItem id="top-link-4" link="/works" text="Works" />
-          <ListItem id="top-link-5" link="/blog" text="Blog" />
+          <ListItem id="top-link-5" link="/blogs" text="Blog" />
           <ListItem id="top-link-6" link="/news" text="News" />
         </div>
         <div className="hidden  sm:flex sm:justify-end sm:items-center">

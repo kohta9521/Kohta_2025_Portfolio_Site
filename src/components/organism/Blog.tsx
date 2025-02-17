@@ -1,9 +1,9 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 
 // hooks
+import useGetAllBlogs from "@/hooks/useGetAllBlogs";
 import { useGetBlogById } from "@/hooks/useGetBlogById.ts";
-import { useGetAllBlogs } from "@/hooks/useGetAllBlogs";
 
 // components
 import SecTitle from "../atoms/SecTitle";
@@ -11,29 +11,18 @@ import ViewMoreButton from "../atoms/ViewMoreButton";
 import BlogCard from "../molecules/BlogCard";
 
 const Blog = () => {
-  const { blog, error } = useGetBlogById("t9idg61u6kc");
-  const { blogs, error: allBlogsError } = useGetAllBlogs();
+  // ブログ一覧を取得
+  const blogs = useGetAllBlogs();
+  // Pick up記事の取得
+  const { blog: pickBlog, error } = useGetBlogById("c1-hz88kjm");
 
-  useEffect(() => {
-    console.log("All Blogs:", blogs);
-    console.log("Single Blog:", blog);
-  }, [blogs, blog]);
-
-  if (error || allBlogsError) {
-    return <p>Error: {error || allBlogsError}</p>;
+  if (error) {
+    return <p>Error: {error}</p>;
   }
 
-  if (!blog || !blogs || blogs.length === 0) {
+  if (!pickBlog) {
     return <p>Loading...</p>;
   }
-
-  // 最新のブログ4件を取得 (作成日時が新しい順にソート)
-  const latestBlogs = [...blogs]
-    .sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-    )
-    .slice(0, 4);
 
   return (
     <div className="w-screen h-auto py-10 sm:py-28">
@@ -51,19 +40,28 @@ const Blog = () => {
           <div className="sm:flex sm:justify-between">
             <div className="sm:w-2/5">
               <p className="mb-2 text-lg font-semibold sm:block">Pickup!</p>
-              <BlogCard
-                id={blog.id}
-                link={`/blogs/${blog.id}`}
+
+              {/* <BlogCard
+                id="blog-card-1"
+                link="/"
                 type="Card"
-                image={blog.topImage.url}
-                date={blog.createdAt}
-                title={blog.title}
+                image="/images/sample.png"
+                date="2025.1.10"
+                title="Next.jsの使い方を解説します"
+              /> */}
+              <BlogCard
+                id={pickBlog.id}
+                link={`/blogs/${pickBlog.id}`}
+                type="Card"
+                image={pickBlog.topImage.url}
+                date={pickBlog.createdAt}
+                title={pickBlog.title}
               />
             </div>
 
             {/* List */}
             <div className="w-full h-auto my-12 sm:w-3/6">
-              {latestBlogs.map((blog) => (
+              {blogs.slice(0, 4).map((blog) => (
                 <BlogCard
                   key={blog.id}
                   id={blog.id}
@@ -74,38 +72,6 @@ const Blog = () => {
                   title={blog.title}
                 />
               ))}
-              {/* <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              /> */}
               <div className="w-full h-10"></div>
               <ViewMoreButton
                 id="blog-view-more"

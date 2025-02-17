@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 
-// type
+// types
 import { Blog } from "@/types/blog";
 
 export function useGetBlogById(id: string | undefined) {

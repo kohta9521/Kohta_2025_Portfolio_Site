@@ -136,3 +136,27 @@ body {
     animation-duration: 4s;
   }
 }
+
+@layer components {
+  .prose h1 {
+    @apply text-4xl font-bold text-white;
+  }
+  .prose h2 {
+    @apply text-3xl font-semibold text-white;
+  }
+  .prose h3 {
+    @apply text-3xl font-semibold text-white;
+  }
+  .prose p {
+    @apply text-white leading-relaxed;
+  }
+  .prose strong {
+    @apply text-white font-bold;
+  }
+  .prose a {
+    @apply text-white underline hover:text-blue-700;
+  }
+  .prose li {
+    @apply text-white;
+  }
+}

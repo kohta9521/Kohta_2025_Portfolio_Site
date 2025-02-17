@@ -49,7 +49,7 @@ const BasicTemp = ({ id, linkArr, title, desc, children }: BasicPageProps) => {
         <p className="font-medium text-medium text-left sm:text-left">{desc}</p>
       </div>
       {/* Main (children) */}
-      <div className="w-10/12 mx-auto pb-20 sm:max-w-screen-xl">{children}</div>
+      <div className="w-11/12 mx-auto pb-20 sm:max-w-screen-xl">{children}</div>
       <Footer />
     </div>
   );

@@ -3,5 +3,6 @@ export type News = {
   createdAt: string;
   title: string;
   date: string;
-  category: { id: string; name: string };
+  tag: { id: string; text: string };
+  body: string;
 };
