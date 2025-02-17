@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { client } from "@/libs/client";
 
-// `GET` メソッドの修正
+// 非同期に `id` を取得
 export async function GET(
   req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
@@ -18,9 +18,9 @@ export async function GET(
     });
     return NextResponse.json(data);
   } catch (error) {
-    console.error("Error fetching blog by ID:", error);
+    console.error("Error fetching news by ID:", error);
     return NextResponse.json(
-      { error: "Failed to fetch blog" },
+      { error: "Failed to fetch news" },
       { status: 500 }
     );
   }

@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 
 // type
@@ -17,7 +16,7 @@ export function useGetWorkById(id: string | undefined) {
         if (!res.ok) throw new Error("Failed to fetch work");
         return res.json();
       })
-      .then((data) => setWork(data))
+      .then((data: Work) => setWork(data))
       .catch((err) => {
         console.error("Error fetching work:", err);
         setError(err.message);

@@ -1,4 +1,9 @@
+"use client";
 import React from "react";
+
+// hooks
+import useGetAllBlogs from "@/hooks/useGetAllBlogs";
+import { useGetBlogById } from "@/hooks/useGetBlogById.ts";
 
 // components
 import SecTitle from "../atoms/SecTitle";
@@ -6,6 +11,19 @@ import ViewMoreButton from "../atoms/ViewMoreButton";
 import BlogCard from "../molecules/BlogCard";
 
 const Blog = () => {
+  // ブログ一覧を取得
+  const blogs = useGetAllBlogs();
+  // Pick up記事の取得
+  const { blog: pickBlog, error } = useGetBlogById("c1-hz88kjm");
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
+  if (!pickBlog) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div className="w-screen h-auto py-10 sm:py-28">
       <div className="w-11/12 mx-w-11/12 mx-auto sm:w-9/12">
@@ -22,50 +40,38 @@ const Blog = () => {
           <div className="sm:flex sm:justify-between">
             <div className="sm:w-2/5">
               <p className="mb-2 text-lg font-semibold sm:block">Pickup!</p>
-              <BlogCard
+
+              {/* <BlogCard
                 id="blog-card-1"
                 link="/"
                 type="Card"
                 image="/images/sample.png"
                 date="2025.1.10"
                 title="Next.jsの使い方を解説します"
+              /> */}
+              <BlogCard
+                id={pickBlog.id}
+                link={`/blogs/${pickBlog.id}`}
+                type="Card"
+                image={pickBlog.topImage.url}
+                date={pickBlog.createdAt}
+                title={pickBlog.title}
               />
             </div>
 
             {/* List */}
             <div className="w-full h-auto my-12 sm:w-3/6">
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
+              {blogs.slice(0, 4).map((blog) => (
+                <BlogCard
+                  key={blog.id}
+                  id={blog.id}
+                  link={`/blogs/${blog.id}`}
+                  type="List"
+                  image={blog.topImage.url}
+                  date={blog.createdAt}
+                  title={blog.title}
+                />
+              ))}
               <div className="w-full h-10"></div>
               <ViewMoreButton
                 id="blog-view-more"

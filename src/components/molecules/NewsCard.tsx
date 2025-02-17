@@ -7,6 +7,9 @@ import Link from "next/link";
 // hooks
 import useAOS from "@/hooks/useAOS";
 
+// utils
+import { formatDate } from "@/utils/formatDate";
+
 // clsx
 import clsx from "clsx";
 
@@ -15,10 +18,11 @@ export type NewsCardProps = {
   id: string;
   link: string;
   date: string;
+  tag: string;
   title: string;
 };
 
-const NewsCard = ({ id, link, date, title }: NewsCardProps) => {
+const NewsCard = ({ id, link, date, tag, title }: NewsCardProps) => {
   useAOS();
   return (
     <Link
@@ -36,10 +40,10 @@ const NewsCard = ({ id, link, date, title }: NewsCardProps) => {
 
       {/* 🔥 ボーダーアニメーション */}
       <div className="absolute inset-0 border-2 border-transparent group-hover:border-red-500 transition-all duration-500"></div>
-
+      <p>{tag}</p>
       {/* 📆 日付 */}
       <p className="text-sm text-red-400 group-hover:text-white transition-colors duration-300">
-        {date}
+        {formatDate(date)}
       </p>
 
       {/* 📰 タイトル */}
