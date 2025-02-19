@@ -50,11 +50,29 @@ const HamburgerMenu = ({ isOpen, closeMenu }: HamburgerMenuProps) => {
         </li>
         <li>
           <Link
-            href="/services"
+            href="/service"
             onClick={closeMenu}
             className="text-xl hover:underline"
           >
             Services
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/work"
+            onClick={closeMenu}
+            className="text-xl hover:underline"
+          >
+            Works
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/blog"
+            onClick={closeMenu}
+            className="text-xl hover:underline"
+          >
+            Blogs
           </Link>
         </li>
         <li>
