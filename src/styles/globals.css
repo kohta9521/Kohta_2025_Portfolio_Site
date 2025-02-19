@@ -23,6 +23,9 @@ body {
   .subpage-main-text {
     @apply mb-10 text-base leading-loose sm:leading-loose text-white;
   }
+  .subpage-main-image {
+    @apply w-full h-auto mb-10;
+  }
 }
 
 @layer components {

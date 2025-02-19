@@ -5,7 +5,7 @@ import React from "react";
 import Link from "next/link";
 
 // components
-import HamburgerScreenButton from "../atoms/HamburgerScreenButton";
+// import HamburgerScreenButton from "../atoms/HamburgerScreenButton";
 
 // props
 export type HamburgerMenuProps = {
@@ -14,7 +14,7 @@ export type HamburgerMenuProps = {
 };
 
 // icon
-import { IoHomeOutline } from "react-icons/io5";
+// import { IoHomeOutline } from "react-icons/io5";
 
 const HamburgerMenu = ({ isOpen, closeMenu }: HamburgerMenuProps) => {
   return (
@@ -66,14 +66,14 @@ const HamburgerMenu = ({ isOpen, closeMenu }: HamburgerMenuProps) => {
             Contact
           </Link>
         </li>
-        <li>
+        {/* <li>
           <HamburgerScreenButton
             id="sample"
             link="/"
             icon={<IoHomeOutline size={20} className="text-semibold" />}
             text="Sample"
           />
-        </li>
+        </li> */}
       </ul>
     </div>
   );
