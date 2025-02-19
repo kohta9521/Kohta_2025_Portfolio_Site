@@ -26,7 +26,7 @@ const Case = () => {
 
   return (
     <div className="w-screen h-auto py-20">
-      <div className="w-9/12 max-w-10/12 mx-auto">
+      <div className="w-10/12 max-w-10/12 mx-auto sm:w-9/12">
         <SecTitle id="home-case" jaText="過去の実績" enText="CASE" />
         <p className="w-full text-sm text-red-600 font-semibold my-4">
           こちらでは私のこれまでに製作した数々のお仕事をご覧いただくことができます。

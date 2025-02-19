@@ -26,7 +26,7 @@ const Blog = () => {
 
   return (
     <div className="w-screen h-auto py-10 sm:py-28">
-      <div className="w-11/12 mx-w-11/12 mx-auto sm:w-9/12">
+      <div className="w-10/12 mx-w-11/12 mx-auto sm:w-9/12">
         <SecTitle id="blog" jaText="ブログ" enText="Blog" />
         {/* Main Tech */}
         <div className="py-12">
@@ -75,73 +75,7 @@ const Blog = () => {
               <div className="w-full h-10"></div>
               <ViewMoreButton
                 id="blog-view-more"
-                link="/blog"
-                position="center"
-              />
-            </div>
-          </div>
-        </div>
-        {/* Stock */}
-        <div className="py-12">
-          <p className="block bg-red-600 mb-3 w-32 text-center text-white py-1 px-2 rounded-full font-semibold text-xs">
-            株式・金融関連
-          </p>
-          <h3 className="text-3xl font-bold mb-3">- Stock</h3>
-          <p className="w-full text-xs text-red-600 font-semibold mb-10 sm:text-base">
-            私が日々行なっているトレードのポートフォリオや株式投資全般の勉強内容、税金や金融に関する内容をテックとは分けてブログにしています。Stock
-            Blogは別サイトに遷移するためご注意ください。
-          </p>
-          <div className="sm:flex sm:justify-between">
-            <div className="sm:w-2/5">
-              <p className="mb-2 text-lg font-semibold sm:block">Pickup!</p>
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="Card"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-            </div>
-
-            {/* List */}
-            <div className="w-full h-auto my-12 sm:w-3/6">
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-              <BlogCard
-                id="blog-card-1"
-                link="/"
-                type="List"
-                image="/images/sample.png"
-                date="2025.1.10"
-                title="Next.jsの使い方を解説します"
-              />
-              <div className="w-full h-10"></div>
-              <ViewMoreButton
-                id="blog-view-more"
-                link="/blog"
+                link="/blogs"
                 position="center"
               />
             </div>

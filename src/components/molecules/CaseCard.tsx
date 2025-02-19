@@ -43,7 +43,7 @@ const CaseCard = ({ id, link, image, tag, title, category }: CaseCardProps) => {
       </div>
 
       {/* 📌 カテゴリーラベル */}
-      <p className="block w-28 mb-3 px-2 py-1 text-xs text-center font-semibold leading-full text-white bg-red-600 rounded-md">
+      <p className="block w-36 mb-3 px-2 py-1 text-xs text-center font-semibold leading-full text-white bg-red-600 rounded-md">
         {category}
       </p>
 

@@ -30,10 +30,9 @@ const Profile = () => {
             </h1>
             <ul className="mb-7 text-sm font-medium leading-6 sm:leading-7 sm:text-base">
               <li>・学習院大学法学部法学科学部3年生(21)</li>
-              <li>・株式会社Enter CEO</li>
               <li>・株式会社AMIJAM CTO</li>
               <li>・株式会社メディアエイド 新規事業PT本部 PDM</li>
-              <li>・株式会社MugendAI フロントエンドエンジニア</li>
+              <li>・株式会社メルカリ メルコイン PdM</li>
             </ul>
             <p className="mb-20 text-sm font-medium text-white leading-6 sm:text-base sm:leading-loose">
               大学1年生でプログラミングと出会い没頭、勉強を始めてから数年間ほぼ毎日コーディングをしている。
